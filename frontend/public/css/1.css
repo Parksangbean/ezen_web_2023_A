@@ -1,0 +1,21 @@
+@charset "UTF-8";
+.title{
+	border-left: solid 7px green;
+	padding-left: 10px;
+}
+.content{
+		width: 300px;
+		border: solid 1px gray;
+		border-radius: 10px;
+		padding: 40px;
+		background-color: #e8e8e8;
+}
+.conti{
+	margin-bottom: 10px;
+}
+.contd{
+	width: 300px;
+	border: solid 2px gray;
+	border-radius: 10px;
+	
+}

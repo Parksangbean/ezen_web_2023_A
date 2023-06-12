@@ -5,6 +5,7 @@
 				/* 선모양 , 선굵기 , 선색상 */
 }
 .box2{
+	margin-top: 10px;
 	border-top: solid 1px skyblue; /* 상단 테두리 */
 	border-right: dotted 2px orange; /* 오른쪽 테두리 */
 	border-bottom: double 3px red; /* 하단 테두리 */
@@ -14,8 +15,8 @@
 .box3{
 		border: solid 2px red;
 		border-radius: 100px;		/*둥근 모서리 */
-		box-shadow: 5px 4px 5px orange; /*x축 y축 흐림정도 색상 */
-
+		box-shadow: 5px 4px 5px orange; 
+							/*x축 y축 흐림정도 색상 */
 		padding: 10px;					/* 안쪽 여백 */
 		margin: 20px;						/* 바깥 여백 */
 }
