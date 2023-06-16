@@ -115,6 +115,7 @@ a{
 }
 .font{
    color: #6bafe9;
+   font-size: 20px;
 }
 .ft_box li{
    display: flex;
