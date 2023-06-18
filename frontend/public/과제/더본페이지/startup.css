@@ -62,7 +62,7 @@ li{list-style-type: none;}
 
 .startup_main_title{
    height: 270px;
-   border: 1px solid red;
+  
 }
 
 
@@ -92,7 +92,6 @@ li{list-style-type: none;}
    font-size: 24px;
    font-weight: bold;
    padding-bottom: 50px;
-   border: 1px solid blue;
 }
 
 .startup_menu_form {
@@ -107,16 +106,84 @@ li{list-style-type: none;}
 }
 
 
+/*-------------------STARTUP 본문 -------------------*/
+
+#startup_content { 
+   width: 100%;
+   margin: 0 auto;
+   background-color: #F7F7F7; /* 폼배경 컬러 */
+   padding-bottom: 90px;
+}
+
+.startup_main_title_area {
+   width: 100%;
+   background-color: #ffffff;
+   height: 230px;
+}
+
+.startup_main_title{
+   width: 1500px;
+   margin: 0 auto;
+}
+
+/* 메인텍스트 */
+.startup_main_text > h3 { /* 창업문의 텍스트 */
+   font-weight: bold;
+   font-size: 50px;
+}
+
+.startup_main_text > p {
+   font-size: 16px;
+   line-height: 180%;
+   margin-top: 10px;
+}
+
+.startup_main_text > p > span {
+   font-weight: bold;
+}
+
+.startup_category {
+   text-align: right;
+   display: inline-block;
+   width: 1500px;
+   font-size: 14px;
+}
+
+/* 메인컨텐츠 */
+
+.startup_menu {
+   font-size: 24px;
+   font-weight: bold;
+   padding-bottom: 50px;
+   width: 1500px;
+   margin: 0 auto;
+   margin-top: 100px;
+}
+
+.startup_menu_form {
+   border-bottom: 2px solid #de121c;
+   font-size: 26px;
+} 
+
+
+.startup_menu_order , .startup_menu_qna {
+   margin-left : 40px;
+   padding-bottom: 4px;
+   font-size: 26px;
+   color: #878787;  /* 회색 */
+}
+
+
 /*--------------------------- 본문 입력양식 ---------------------------*/
 
 
 
 #startup_form {
-   width: 1250px; 
-   border: 1px solid orange;
+    width: 1500px; /* 폼 부분 전체 길이 */
    margin: 0 auto;
    display: flex;
     box-sizing: border-box; /* 박스 사이징 설정 */
+    flex-direction: column;   /* 양식 / 동의 부분 세로 정렬*/
 }
 
 #startup_form select { /* 셀렉트 태그 디자인 */
@@ -127,20 +194,29 @@ li{list-style-type: none;}
       outline: none; /* 셀렉트 태그 아웃라인 제거 */
 }
 
+.startup_title_area {
+   background-color: #ffffff; /*본문컬러 흰색*/
+   padding: 50px 150px 80px 150px;; /* 본문 흰색 영역 여백*/
+}
+
 
 /*--- 인풋 타이틀영역 ---*/
 
-
 .startup_input_box {
    display: flex;
-   margin: 20px 0;
+   margin: 20px 0; /* 인풋 박스들간의 여백*/
    align-items: center; /* 세로 중앙 정렬 */
 }
 
 .startup_input_title { /* 양식 질문 타이틀*/
    font-size: 18px;
    width: 340px;
+   font-weight: bold;
+   color: #3c3c3c;
+   font-family: 'Noto Sans KR', sans-serif;
+   letter-spacing: -0.5px;
 }
+
 
 .startup_input_title > span { /* 양식 질문 안에 * */
    font-family: 'Noto Sans KR', sans-serif;
@@ -152,8 +228,8 @@ li{list-style-type: none;}
 }
 
 /*--- 입력박스1 ---*/
-.startup_brand_nation , .startup_input_zone1 { /*입력박스5 추가*/
-   width: 420px;
+.startup_brand_nation , .startup_inpuat_zone1 { /*입력박스5 추가*/
+   width: 410px;
    font-family: 'Noto Sans KR', sans-serif;
    font-size: 15px;
    font-weight: bold;
@@ -161,7 +237,7 @@ li{list-style-type: none;}
 
 
 .startup_brand_title , .startup_input_zone2 {   /*입력박스5 추가*/
-   width: 420px;
+   width: 410px;
    font-family: 'Noto Sans KR', sans-serif;
    font-size: 15px;
    font-weight: bold;
@@ -204,16 +280,18 @@ li{list-style-type: none;}
 
 /*--- 입력박스4 ---*/
 .startup_input_email {
-   width: 250px;
+   width: 230px;
    padding: 15px;
    border: none; /* 기존 보더 삭제 */
    border-bottom: 1px solid #888; /* 인풋 보더 추가*/
    outline: none; /*아웃라인 삭제 */
    color: #888;
    font-family: 'Noto Sans KR', sans-serif;
-   font-size: 16px;
+   font-size: 15px;
+   font-weight: bold;
 }
 
+   
 .startup_input_box > span {
    color: #888;
    font-family: 'Noto Sans KR', sans-serif;
@@ -223,11 +301,10 @@ li{list-style-type: none;}
    width: 250px;
    font-family: 'Noto Sans KR', sans-serif;
    font-size: 16px;
+   font-weight: bold;
    color: #888;
    margin-left: 70px;
 }
-
-
 
 .startup_line_cut {
    margin-bottom: 100px;
@@ -253,6 +330,9 @@ li{list-style-type: none;}
 
 .startup_input_box > label {
    margin-left : 10px;
+   font-family: 'Noto Sans KR', sans-serif;
+   color: #888;
+   font-weight: bold;
 }
 
 /* 우편번호 찾기 버튼 */
@@ -289,18 +369,28 @@ li{list-style-type: none;}
 /*--- 입력박스8 ---*/
 
 .startup_textarea {
-   width: 1000px;
+   width: 820px;
    height: 90px;
    display: block;
+}
+
+.startup_textarea > textarea::placeholder {
+   color: #999999;
+   font-size: 15px;
 }
 
 .startup_textarea > textarea {
    padding : 20px;
    font-family: 'Noto Sans KR', sans-serif;
    font-size: 15px;
-   font-weight: 700;
+   font-weight: 600;
    border: none;
    border-bottom: 1px solid #888;
+   width: 100%;
+   letter-spacing: -0.7px;
+   line-height: 150%;
+   color: #999999;
+   outline: none;
 }
 
 .startup_text_count {
@@ -309,11 +399,149 @@ li{list-style-type: none;}
    color: #888;
    font-weight: bold;
    margin-left: 340px;
+
 }
 
 .startup_text_count > span {
    color: #de121c;
 }
+
+
+
+
+/*--------------------약관영역----------------*/
+/*--- 동의부분 ---*/
+.startup_agree_area {
+   margin-top: 100px;
+   
+}
+
+.startup_agree_info_box {
+   display: flex;
+   margin: 20px 0;
+   
+}
+
+.startup_agree_btn {
+   border: 1px solid #888;
+   border-radius: 5px;
+   background-color: #ffffff;
+   color: #888;
+   font-size: 16px;
+   font-weight: 600;
+   padding: 15px 22px;
+   font-family: 'Noto Sans KR', sans-serif;
+   margin-top: 20px;
+   cursor:pointer;
+}
+
+.startup_agree_info_box a {
+   display: inline-block;
+}
+
+
+.startup_agree_text {
+   background-color: #eee;
+   font-family: 'Noto Sans KR', sans-serif;
+   line-height: 150%;
+   color: #888;
+   font-weight: bold;
+   padding: 35px;
+}
+
+.startup_agree_text > span ,
+.startup_agree_text2 > span {
+   color: #de121c;
+   font-family: 'Noto Sans KR', sans-serif;
+}
+
+.startup_agree_btnbox {
+   display:flex;
+   align-items: center;
+    margin: 20px 0;
+}
+
+.startup_agree_btnbox > label {
+   font-family: 'Noto Sans KR', sans-serif;
+   color: #888;
+   font-weight: bold;
+}
+
+.startup_agree_btnbox > label {
+   margin-left: 10px;
+}
+
+.startup_agree_text2 {
+   width: 786px;
+   background-color: #eee;
+   font-family: 'Noto Sans KR', sans-serif;
+   line-height: 150%;
+   color: #888;
+   font-weight: bold;
+   padding: 35px;
+}
+
+
+
+/*문의등록 버튼*/
+
+.startup_qna_btnbox {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   margin-top: 40px;
+}
+
+
+.startup_qna_btn1 {
+   width: 200px;
+   border: none;
+   background-color: #de121c;
+   color: white;
+   font-size: 20px;
+   font-weight: bold;
+   padding: 20px 0;
+   margin-top: 20px;
+   cursor:pointer;
+   box-sizing: border-box;
+}
+
+.startup_qna_btn2 {
+   width: 200px;
+   border: 1px solid #de121c;
+   background-color: white;
+   color: #de121c;
+   font-size: 20px;
+   font-weight: bold;
+   padding: 20px 0;
+   margin-top: 20px;
+   cursor:pointer;
+   box-sizing: border-box;
+}
+
+
+/* 상담번호 */
+
+.startup_callnumber {
+   width: 100%;
+   font-size:18px;
+   display: flex;
+   gap: 30px;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid #ddd;
+   background-color: #eeeeee;
+   padding: 20px 0;
+   margin-top: 70px;
+   color: #3c3c3c;
+}
+
+
+.startup_callnumber > p > span {
+   font-size: 24px;
+   font-weight: bold;
+}
+
 
 /* 푸터 */
 #main_footer{

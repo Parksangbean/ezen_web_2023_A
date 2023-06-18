@@ -107,13 +107,13 @@ a{      /* 모든 a태그에 적용 */
    font-size: 16px;
    font-weight: bold;
 }
-/*푸터 end*/
+/*-----------------해더 end*-----------------------/
 
 
-/* ----------본문--------- */
-#brand_popup_wrap{
-position: fixed; right: 0px; top: 100px;
-}
+/* ---------------------본문--------------------------------*/
+
+
+#info_content{}
 
 /* 본문 전체 구역 */
 .info_section{
@@ -177,11 +177,17 @@ position: fixed; right: 0px; top: 100px;
    margin-bottom: 35px; 
 }
 
-.info_bottom_title p{
+.info_bottom_title a{
    margin: 0px 15px;
    font-size: 1.625rem;
    font-weight: 500;
    color: #878787;
+   border-bottom: 1px solid #f7f7f7;
+}
+
+.info_bottom_title a:visited{
+   color: #000;
+   border-bottom: 1px solid #de121c;
 }
 
 /* 본문 아래 전체 하얀색 박스 */
@@ -207,6 +213,11 @@ position: fixed; right: 0px; top: 100px;
    font-weight: 500;
    padding-top: 60px;
    padding-bottom: 80px;
+   background-color: white;
+}
+
+.info_city_box a{
+   background-color: white;
 }
 
 .info_all{
@@ -216,6 +227,12 @@ position: fixed; right: 0px; top: 100px;
    border-bottom: 1px solid #ddd;
    text-align: center;
    padding-top: 15px;
+   color: #878787;
+}
+
+.info_all:visited{   /* 해당 요소를 클릭한적이 있으면 css */
+   color: white;
+   background-color: red;
 }
 
 .info_seoul{
@@ -306,6 +323,7 @@ position: fixed; right: 0px; top: 100px;
 .info_select{
    width: 190px; height: 45px;
    border: 1px solid #d9d9d9;
+   padding-left: 15px;
    font-weight: bold;
    font-size: 15px;
    color: #888;
@@ -321,21 +339,30 @@ position: fixed; right: 0px; top: 100px;
    width: 100%; height: 100%;
 }
 
+
+
 /* 본문 내용 리스트 박스 */
 .info_image_list{
-   width: 30%;
+   width: 33%;
    display: inline-block;
-   margin-left: 20px;
-   margin-right: 15px;
-   margin-bottom: 100px;
-   position: relative;
+   
 }
+
+.info_list_box{
+   height: 100%;
+   position: relative;
+   margin: 0px 6px 20px 6px;
+}
+
+
+.info_image_list:hover { border: 1px solid red;}
 
 /* 본문 이미지 박스 */
 .info_logo_box{
    background-color:  #f7f7f7;
    text-align: center;
-   margin-bottom: 25px;
+   margin: 25px;
+   position: relative;
 }
 
 /* 본문 이미지 */
@@ -346,6 +373,7 @@ position: fixed; right: 0px; top: 100px;
 
 /* 본문 이미지 아래 텍스트 박스 */
 .info_text_box{
+   margin: 0px 25px;
    padding-bottom: 30px;
 }
 
@@ -364,7 +392,7 @@ position: fixed; right: 0px; top: 100px;
 }
 
 .info_image_text1{
-   font-size: 15px;
+   font-size: 14px;
    font-weight: bold;
    margin-bottom: 10px;
 }
@@ -383,6 +411,10 @@ position: fixed; right: 0px; top: 100px;
    margin-bottom: -10px;
 }
 
+.info_soldsell{
+   padding-bottom: 30px;
+}
+
 /* 마감 하이퍼링크 박스 */
 .info_sold{
    border: 1px solid #878787;
@@ -392,7 +424,7 @@ position: fixed; right: 0px; top: 100px;
    font-size: 20px;
    color: white;
    
-   margin: 0px 5px;
+   margin: 0px 25px;
    padding: 10px 80px;
 }
 
@@ -405,9 +437,10 @@ position: fixed; right: 0px; top: 100px;
    font-size: 20px;
    color: white;
    
-   margin: 0px 5px;
+   margin: 0px 25px;
    padding: 10px 65px;
 }
+
 
 .info_deadline{
    position: absolute;
@@ -417,9 +450,38 @@ position: fixed; right: 0px; top: 100px;
    color: white;
    padding: 5px 15px;
    z-index: 2;
-   right: 0;
+   right: 25px;
    top: 0;
 }
+/* 픽스드 설정 */
+/* 전체 구역 */
+#brand_popup_wrap{position: fixed; right: 50px; top: 90px;}
+
+.brand_popup_item{position: relative;}
+
+/* 동그라미 지정 */
+#brand_popup_wrap li{ /* 아이콘 구역 */
+   width: 120px; height: 120px; background-color: #BD1D1D; 
+   padding: 10px; border: 1px solid #BD1D1D; border-radius :400px;
+   text-align: center; box-shadow: 0 0 8px;
+   position: fixed; right: 50px; 
+   }
+
+/* 글자 위치 */
+.brand_popup_point{
+    position: relative;
+    right: 25px;
+    top: 100px;
+}
+/* 창업문의 글자 수정 */
+.brand_popup_point1 {font-size: 15px; color:white; font-weight: bold;}
+
+/* 노트 모양 이미지 */
+
+#brand_popup_wrap img {position: absolute; top: 35px;}
+/* 픽스드 끝 */
+
+
 /* 푸터 */
 #main_footer{
    width: 100%;
