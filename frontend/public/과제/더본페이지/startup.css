@@ -16,7 +16,7 @@
 }
 
 /* CSS √ ±‚ ºº∆√*/
-*{ margin:0; padding:0; font-family:'S-CoreDream-3Light'; font-size: 12px;}
+*{ margin:0; padding:0; font-family:'S-CoreDream-3Light';}
 a{color:black; text-decoration: none;}
 li{list-style-type: none;}
 
@@ -29,7 +29,7 @@ li{list-style-type: none;}
    justify-content: space-between;
 }
 #main_header a{
-	font-size: 18px;
+	font-size: 14px;
 }
 .main_logo{
    width: 200px;
@@ -99,7 +99,7 @@ li{list-style-type: none;}
 /* ∏ﬁ¿Œƒ¡≈Ÿ√˜ */
 
 .startup_menu {
-   font-size: 24px;
+   font-size: 40px;
    font-weight: bold;
    padding-bottom: 50px;
    width: 1500px;

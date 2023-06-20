@@ -9,7 +9,7 @@
      font-style: normal;
 }
 *{
-   padding: 0px; margin: 0px; font-size: 12px;
+   padding: 0px; margin: 0px; font-size: 12px
 }
 /* a기본값 제거 */
 a{
@@ -53,9 +53,13 @@ li{
 }
 /* -------헤더 end --------*/
 
-/* ----------본문--------- */
 
 /* ---------------------본문--------------------------------*/
+
+
+
+
+
 /* 본문 전체 구역 */
 .info_section{
    background-color: #f7f7f7;
@@ -126,9 +130,9 @@ li{
    border-bottom: 1px solid #f7f7f7;
 }
 
-.info_bottom_title a:visited{
-   color: #000;
-   border-bottom: 1px solid #de121c;
+.info_bottom_title a:visited {
+    color: #000;
+    border-bottom: 1px solid #de121c;
 }
 
 /* 본문 아래 전체 하얀색 박스 */
