@@ -107,6 +107,7 @@ document.write(html);
 */
 
 //5. 증감연산자 [date+1 , date+=1 date++]
+/*
 let 데이터2 = 10;
 console.log('data: '+ 데이터2)		// 10
 console.log('data: ' + (데이터2++)) // 10에서 1증가 => 11????10
@@ -115,8 +116,44 @@ console.log('data' + (++데이터2)) //12[출력전에 증가]
 
 
 console.log('data' +(데이터2--)); //12에서 1감소 => 11????? 12 [출력후에 감소]
+console.log('data' +데이터2);		// 11
+console.log('data' +(--데이터2)); // 11에서 1감소 => 10????? 10 [출력전에 감소]
+*/
+//6.삼항연산자	[조건 ? 참 : 거짓 (만약에 조건이 true이면 참코드 실행 false 이면 거짓코드 실행)]
+	//[ ]
+	/*
+let 나이 =38	//나이라는 변수에 38을 저장
+let 연령구간 =나이<=19 ? '청소년' : '성인';
+console.log('38의 연령구간: ' +연령구간);
+		// 조건(true/false 결과 갖는 논리 연산)
+	//예제2[조건1 ?참1 :조건2 ?참2 : 조건3 ? 참3 : 거짓]
+let 점수=90
+let 등급= 점수>= 90 ? 'A등급' :
+											점수 >=80 ? 'B등급' :'탈락';
+														점수>=70 ? 'C등급' : '탈락';
+console.log('점수의 등급: ' +등급)
 
-//6.삼항연산자
+*/
+/*
+문제9 : 정수 2개를 입력받아 더 큰수 를 출력
+문제10 : 정수 3개를 입력받아 가장 큰수 를 출력 
+문제11 : 정수 3개를 입력받아 오름차순 으로 출력    [ 7 5 9 -> 5 7 9]
+*/
+
+let value=prompt('정수: ')
+let value1=prompt('정수1: ')
+console.log('두 정수중 더 큰수: ' +(value >value1 ? value:value1))
+console.log('두 정수중 더 큰수: ' +(value >value1 ? value1 : value<value1 ? value1 : '두 수는 같다.'));
+
+let value2=prompt('정수1: ')
+let value3=prompt('정수2: ')
+let value4=prompt('정수3: ')
+
+let max = value3
+max=max <value4 ? value3 : max
+max = max < value4 ? value4 : max
+
+console.log(' 세 정수중 가장 큰수:' +max)
 
 
 
