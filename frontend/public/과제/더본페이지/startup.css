@@ -76,7 +76,7 @@ li{list-style-type: none;}
 /* 메인텍스트 */
 .startup_main_text > h3 { /* 창업문의 텍스트 */
    font-weight: bold;
-   font-size: 50px;
+   font-size: 45px;
 }
 
 .startup_main_text > p {

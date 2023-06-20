@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 *{
-   padding: 0px; margin: 0px; font-size: 12px
+   padding: 0px; margin: 0px; font-size: 12px;
 }
 /* a기본값 제거 */
 a{
@@ -15,14 +15,12 @@ li{
 /* 헤더 */
 #main_header{
    width: 1500px;
-   height: 100px;
+   height: 60px;
    margin: 0 auto;
    display: flex;
    justify-content: space-between;
 }
-#main_header a{
-	font-size: 18px;
-}
+
 .main_logo{
    width: 200px;
    height: 48px;
@@ -43,6 +41,9 @@ li{
    font-size: 16px;
    font-weight: bold;
 }
+#main_header a{
+	font-size: 14px;
+	}
 /*푸터 end*/
 
 

@@ -9,7 +9,7 @@
      font-style: normal;
 }
 *{
-   padding: 0px; margin: 0px; font-size: 12px
+   padding: 0px; margin: 0px; font-size: 12px;
 }
 /* a기본값 제거 */
 a{
@@ -29,7 +29,7 @@ li{
    justify-content: space-between;
 }
 #main_header a{
-	font-size: 18px;
+	font-size: 14px;
 }
 .main_logo{
    width: 200px;
@@ -55,66 +55,7 @@ li{
 
 /* ----------본문--------- */
 
-/* ---------공통 속성-------- */
-*{padding: 0px; margin: 0px; font-family: 'S-CoreDream-3Light';}
-
-li{list-style-type: none;}
-
-a{      /* 모든 a태그에 적용 */
-   color: black;
-   text-decoration: none;   /* 밑줄, 윗줄, 취소선 */
-}
-
-*:focus{ outline: none; }
-
-
-@font-face {
-     font-family: 'S-CoreDream-3Light';
-     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
-     font-weight: normal;
-     font-style: normal;
-}
-
-/* ----------헤더--------- */
-/* 헤더 */
-#main_header{
-   width: 1500px;
-   height: 100px;
-   margin: 0 auto;
-   display: flex;
-   justify-content: space-between;
-}
-#main_header a{
-	font-size: 18px;
-}
-.main_logo{
-   width: 200px;
-   height: 48px;
-   padding-top: 20px;
-}
-.main_site{
-   width: 180px;
-   height: 25px;
-   padding-top: 34px;
-}
-#main_header ul{
-   padding-top: 17px;
-   display: flex;
-}
-#main_header li{
-   margin: 20px;
-   display: flex;
-   font-size: 16px;
-   font-weight: bold;
-}
-/*-----------------해더 end*-----------------------/
-
-
 /* ---------------------본문--------------------------------*/
-
-
-#info_content{}
-
 /* 본문 전체 구역 */
 .info_section{
    background-color: #f7f7f7;
