@@ -56,59 +56,6 @@ li{list-style-type: none;}
 /*-------------------STARTUP 본문 -------------------*/
 
 #startup_content { 
-   width: 1500px;    /*본문 가로길이*/
-   margin: 0 auto;   /*본문 중앙정렬*/
-}
-
-.startup_main_title{
-   height: 270px;
-  
-}
-
-
-.startup_main_title h3 { /* 창업문의 텍스트 */
-   font-weight: bold;
-   font-size: 50px;
-}
-
-.startup_main_title p {
-   font-size: 16px;
-   line-height: 180%;
-   margin-top: 10px;
-}
-
-.startup_main_title span {
-   font-weight: bold;
-}
-
-.startup_category {
-   text-align: right;
-   display: inline-block;
-   width: 1500px;
-   font-size: 14px;
-}
-
-.startup_menu {
-   font-size: 24px;
-   font-weight: bold;
-   padding-bottom: 50px;
-}
-
-.startup_menu_form {
-   border-bottom: 2px solid #de121c;
-} 
-
-
-.startup_menu_order , .startup_menu_qna {
-   margin-left : 40px;
-   padding-bottom: 4px;
-   color: #878787;  /* 회색 */
-}
-
-
-/*-------------------STARTUP 본문 -------------------*/
-
-#startup_content { 
    width: 100%;
    margin: 0 auto;
    background-color: #F7F7F7; /* 폼배경 컬러 */
@@ -162,14 +109,12 @@ li{list-style-type: none;}
 
 .startup_menu_form {
    border-bottom: 2px solid #de121c;
-   font-size: 26px;
 } 
 
 
 .startup_menu_order , .startup_menu_qna {
    margin-left : 40px;
    padding-bottom: 4px;
-   font-size: 26px;
    color: #878787;  /* 회색 */
 }
 
@@ -202,6 +147,7 @@ li{list-style-type: none;}
 
 /*--- 인풋 타이틀영역 ---*/
 
+
 .startup_input_box {
    display: flex;
    margin: 20px 0; /* 인풋 박스들간의 여백*/
@@ -228,7 +174,7 @@ li{list-style-type: none;}
 }
 
 /*--- 입력박스1 ---*/
-.startup_brand_nation , .startup_inpuat_zone1 { /*입력박스5 추가*/
+.startup_brand_nation , .startup_input_zone1 { /*입력박스5 추가*/
    width: 410px;
    font-family: 'Noto Sans KR', sans-serif;
    font-size: 15px;
@@ -314,7 +260,7 @@ li{list-style-type: none;}
 /*--- 입력박스5는  입력박스1에 같이 입력함---*/
 /*--- 입력박스6 ---*/
 
-#radio_btn1 , #radio_btn2{
+.radio_btn1 , .radio_btn2{
     accent-color: #de121c;  /* radio 버튼 색상 변경 */
    font-family: 'Noto Sans KR', sans-serif;
    font-size: 16px;
@@ -323,7 +269,7 @@ li{list-style-type: none;}
    height: 23px;
 }
 
-#radio_btn2 {
+.radio_btn2 {
    margin-left : 30px;
 }
 
