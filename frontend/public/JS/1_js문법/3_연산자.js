@@ -161,18 +161,5 @@ console.log(' 세 정수중 가장 큰수:' +max)
 */
 
 // 문제 11번
-let 정수1=parseInt(prompt('정수1: '));
-let 정수2=(parseIntprompt('정수2: '));
-let 정수3=(parseIntprompt('정수3: '));
-
-let min,max,mid;
-
-min =(정수1>정수2) ? 정수1:정수2;
-max=(정수1<정수2) ? 정수1:정수2;
-
-min=(정수3>min) ? 정수3 : min;
-max=(정수3>max) ? 정수3: max;
-mid=(정수1+정수2+정수3)-(min+max);
-
-console.log("오름차순 결과: " +min+","+mid +","+max);
+// 첫 번째 정수 입력 받기
 
