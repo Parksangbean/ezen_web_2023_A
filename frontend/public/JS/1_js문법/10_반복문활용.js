@@ -84,7 +84,7 @@ output = ``;
 let line1 = prompt( '문제3:')
 for( let i = 1 ; i<=line1 ; i++ ){
 	// [별찍기]
-	for( let s = 1 ; s <= i ; s++){ output += `*`}
+	for( let s = 1 ; s <= i; s++){ output += `*`}
 	// [줄바꿈] i는 1부터 입력받은 줄수까지 1씩증가
 	output +=`\n`;
 }
@@ -125,6 +125,12 @@ for( let i = 1 ; i<=line4 ; i++ ){
 }
 console.log( output )
 
+let line5 = prompt('문제7: ')
+for(let i=1; i<=line5; i++){
+	for(let j=1; j<=line5-1; j++) { output += ` `}
+		for(let s=1; s<=(i*2); s++) { output += `*` }
+		output += `\n`
+}
 
 
 
