@@ -14,27 +14,19 @@ function join(){
 		id.value = ""
 		password.value = ""		
 }
-function login(){
-	let id = document.querySelector(".id")
-	let password = document.querySelector(".password")
-				
-		if(login.value.length>=8 && password.value.length>=8 && id.indexOf(login.value)!=-1 && password.indexOf(password.value)!=-1){
-		 아이디.push(id.value);
-		 비밀번호.push(password.value);
-		alert('로그인이 완료되었습니다')
-	}else if(login.value.length<8){
-		아이디.push(id.value);
-		비밀번호.push(password.value);
-		alert('아이디를 8글자 이상 입력하세요')
-	}
-	else if(password.value.length<8){
-		아이디.push(id.value);
-		비밀번호.push(password.value);
-		alert('비밀번호를 8글자 이상 입력하세요')
-	}else{
-		
-		alert('아이디 또는 비밀번호를 확인해주세요')
-	}
-		id.value = "" 
-		password.value = ""		
-}
+function login() { //로그인 함수
+		let id = document.querySelector('.id').value // 아이디 값
+		let password = document.querySelector('.password').value // 비번 값
+
+		if (아이디.indexOf(id) == -1) {
+			alert('없는 아이디입니다');
+		} else if (비밀번호.indexOf(password) == -1) {
+			alert('비밀번호가 틀렸습니다');
+		} else {
+			alert('로그인 성공');
+
+			document.querySelector('.id').value = '';
+			document.querySelector('.password').value = '';
+
+		}
+	} //로그인 함수 end
