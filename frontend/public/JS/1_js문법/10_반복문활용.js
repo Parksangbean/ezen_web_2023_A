@@ -105,7 +105,7 @@ output = ``;
 let line3 = prompt( '문제5:')
 for( let i = 1 ; i<=line3 ; i++ ){
 	// 2. [공백 출력]
-	for( let b = 1 ; b<=line3-i ; b++ ){ output += ` ` } // 스페이스바 한번 = 공백1개 
+	for( let b = 1 ; b<=line3-i ; b++ ){ output += `` } // 스페이스바 한번 = 공백1개 
 	// 3. [별 출력 ]
 	for( let s = 1 ; s<=i ; s++ ){ output += `*`}
 	// 1. [줄바꿈]
@@ -127,11 +127,20 @@ console.log( output )
 
 let line5 = prompt('문제7: ')
 for(let i=1; i<=line5; i++){
-	for(let j=1; j<=line5-1; j++) { output += ` `}
-		for(let s=1; s<=(i*2); s++) { output += `*` }
+	for(let j=1; j<=line5-i; j++) { output += ` `}
+		for(let s=1; s<=i*2-1; s++) { output += `*` }
 		output += `\n`
 }
+console.log( output )
 
+output = ``;
+let line6 = prompt('문제8: ')
+for(let i=1; i<=line6; i++){
+	for(let j=1; j<=line6-i+1; j++) { output += ` `}
+		for(let s=1; s<=2*line6-i; s++) { output += `*` }
+		output += `\n`
+}
+console.log( output )
 
 
 
