@@ -135,9 +135,9 @@ console.log( output )
 
 output = ``;
 let line6 = prompt('문제8: ')
-for(let i=1; i<=line6; i++){
-	for(let j=1; j<=line6-i+1; j++) { output += ` `}
-		for(let s=1; s<=2*line6-i; s++) { output += `*` }
+for(let i=line6; i>0; i--){
+	for(let j=1; j<line6-i+1; j++) { output += ` `}
+		for(let s=1; s<i*2; s++) { output += `*` }
 		output += `\n`
 }
 console.log( output )
