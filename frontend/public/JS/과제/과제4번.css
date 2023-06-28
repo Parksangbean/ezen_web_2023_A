@@ -1,0 +1,28 @@
+@charset "UTF-8";
+*{margin :0px; padding : 0px; }
+
+#write_page{
+	  border: 1px solid #ccc;
+      padding: 5px;
+      margin: 4px;
+      width:500px;
+      height: 300px;
+      
+}
+#page{
+	border: 1px solid #ccc;
+      padding: 5px;
+      margin: 4px;
+      width:500px;
+      height: 300px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 15px;
+}
+.page_table{
+	margin-right:30px;	
+	border:1px solid #eeeeee;
+	padding:30px;
+	width:500px;
+	font-size: 15px;
+}

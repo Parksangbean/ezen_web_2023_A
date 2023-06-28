@@ -30,3 +30,45 @@
 	1. (필수) div 2개를 만들어서 [ 왼쪽은 회원가입 구역 ] [ 오른쪽은 로그인 구역 ]
 	2. 그외 이쁘게 꾸며주세요. 
 	*/
+let 아이디=[]
+let 비밀번호=[]
+function join(){
+	let sid=document.querySelector('.sid').value;
+	let spw=document.querySelector('.spw').value;
+	
+	if(sid==''|| spw==""){alert('[회원가입실패]: 8글자 입력해주세요.'); return;}
+	if(spw.length<8 || spw.length<8){alert('[회원가입실패]: 8글자 이상 일벽해주세요'); return;}
+	
+	아이디.push(sid)
+	비밀번호.push(spw)
+	
+	alert("회원가입성공")
+}
+function login(){
+	let id=document.querySelector('.id').value;
+	let pw=document.querySelector('.pw').value;
+	
+	if(id==''|| pw==""){alert('학버을 입력해주세요~'); return;}
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
