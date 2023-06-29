@@ -6,7 +6,8 @@
       padding: 5px;
       margin: 4px;
       width:500px;
-      height: 300px;
+      height: 450px;
+      border: 1;
       
 }
 #page{
@@ -15,11 +16,9 @@
       margin: 4px;
       width:500px;
       height: 300px;
-      display: flex;
-      justify-content: space-between;
       font-size: 15px;
 }
-.page_table{
+#boardTable{
 	margin-right:30px;	
 	border:1px solid #eeeeee;
 	padding:30px;
