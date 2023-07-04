@@ -11,7 +11,7 @@
 		<%@include file = "../header.jsp" %>
 
 	<div class="kioskwrap">
-		<div>
+		<div class="kioskheader">
 			<!-- 헤더 : 광고이미지/카테고리출력 표시되는 구역 -->
 			<!-- 배경 광고 이미지  -->
 			<img class="himg" src="../img/himg1.png">
@@ -23,7 +23,6 @@
 				<li>치킨&슈림프버거</li>
 				<li>올데이킹&킹모닝</li>
 			</ul>
-
 		</div>
 
 
@@ -51,10 +50,38 @@
 
 			<div class="cartbox">
 				<!-- 카트구역 -->
-
+				<div class=cartcontent>	<!-- 제품개수/정보 출력  -->
+					<div class="carttop"> <!-- 제품정보 출력 구역 -->
+						<div>카트 <span class="ccount">3</span></div>
+						<div>총 주문금액 <span class="ctotal">31.000</span></div>
+					
+					</div>
+					
+					<div class="cartbottom">
+							<!-- 카트내 제품 1개 -->
+						<div class="citem">
+							<div class="iname">헬로 디아블로 와퍼</div>
+							<div class="iprice">15,000원</div>
+							<div class="icencel">x</div>
+						</div>	
+					</div>
+				
+				</div>			<!-- 제품개수/정보 출력 end -->
+				
+				
+				
+				
+				<div class="cartbtn"> <!-- 제품 버튼 출력 -->
+					
+						<button class="cancelbtn">취소</button>
+						<button class="orderbtn">주문하기</button>
+				
+				
+				
+				</div>		<!-- 제품 버튼 출력 end -->
 			</div>
 			<!-- 카트구역  end  -->
-
+			
 		</div>
 		<!-- 본문 end  -->
 
