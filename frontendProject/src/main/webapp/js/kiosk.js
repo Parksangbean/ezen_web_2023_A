@@ -17,7 +17,7 @@ let burgerList = [
 					{ name : '헬로디아블로와퍼' , price : 9500 , img : '헬로디아블로와퍼.png' , category : 0 } ,
 					{ name : '헬로릴리트와퍼' , price : 1211500 , img : '헬로릴리트와퍼.png' , category : 0 } ,
 					{ name : '치킨킹' , price : 8000 , img : '치킨킹.png' , category : 3 } ,
-				]
+					]
 	// 1. 카트(장바구니) 배열 / 선택 버거들이 저장되는 배열 ???????????????????????
 		// 1.버거객체??? 2.버거의식별=중복x-> 버거제품번호 대신에 배열인덱스 ???
 let cartList = [ ]
@@ -103,7 +103,7 @@ function productPrint( categoryNo ){  // 어떤 카테고리의 제품 출력한
 								</div> 
 							</div>`
 			} // 
-		} // f end 
+``		} // f end 
 	// 3. 출력[대입]
 	productbox.innerHTML = html 
 } // f end 
