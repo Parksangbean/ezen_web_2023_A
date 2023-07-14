@@ -22,7 +22,10 @@ public class Ex4_입출력 {	//class s
 		System.out.printf("상품의 가격: %-6d원 \n", value);	// %-6d : 6칸 정수 자리에 value 변수 출력 [ 자릿수 비어 있으면 공백처리]
 		System.out.printf("상품의 가격: %06d원 \n", value);	// %06d : 6칸 정수 자리에 value 변수 출력 [ 자릿수 비어 있으면 0처리]
 		
-		System.out.printf("반지름 파이 : %.1f\n" , 3.14);
+		System.out.printf( "반지름 파이 %f \n" , 3.14 );
+		System.out.printf( "반지름 파이 %.1f \n" , 3.14 );
+		System.out.printf( "회원 아이디 : %s \n" , "qweqwe" );
+		
 		//2. 입력
 			//1. 입력 객체 생성한다.
 			// Scan +컨트롤+스페이스바 => Scanner : 클래스(설계더)
@@ -34,7 +37,7 @@ public class Ex4_입출력 {	//class s
 		
 				//2 . 입력 객체를 이용한 입력값 호출/가져오기
 					//1. 입력받은 문자열 가져오기		scanner.next(); 띄어쓰기x	// vs scanner.nextLine();띄어쓰기o포함
-					//2. 변수에 저장
+					//2. 변수에 저장   
 		String 문자열 =scanner.next(); 
 					//3. 변수에 출력 확인
 		System.out.println("입력된 문자열은 : " + 문자열);
