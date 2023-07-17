@@ -5,6 +5,23 @@ public class Level1_1 {
 	public static void main(String[] args) {
 		System.out.println(" >> Level1_1 answer >> \n");
 		/* 문제풀이 위치 */
+		boolean bool= true;
+		byte a = 100;
+		char b ='A';
+		short c = 30000;
+		int d = 200000000;
+		long e = 2000000000;
+		float f = 3.123123f;
+		double g = 3.123123123;
+		
+		System.out.println("boolean :"+bool);
+		System.out.println("byte :"+a);
+		System.out.println("char :"+b);
+		System.out.println("short:"+c);
+		System.out.println("int :"+d);
+		System.out.println("long :"+e);
+		System.out.println("float :"+f);
+		System.out.println("double :"+g);
 		
 		/* ----------- */
 	}

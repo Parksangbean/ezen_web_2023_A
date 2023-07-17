@@ -10,9 +10,12 @@ public class Level1_5 {
 		int value3 = 2000000000;		
 		long value4 = 40000000000L;		
 		float value5 = 3.123123123F;
-		
 		/* 문제풀이 위치 */
-	
+		System.out.println("byte -> short :"+value1);
+		System.out.println("short -> int :"+value2);
+		System.out.println("int -> long :"+value3);
+		System.out.println("long -> float :"+(float)value4);
+		System.out.println("float -> double :"+(double)value5);
 		/* ----------- */
 	}
 }

@@ -11,11 +11,87 @@ public class Level1_8 {
 		Scanner scanner = new Scanner(System.in);
 		
 		String header = "\n============방문록===============\n번호\t 작성자 \t 방문록\n";
-		String boardlist = "";
+		String boardlist ="";
 		String footer = "================================\n";
 		String output = "";
 		
+		
+		
 		/* 문제풀이 위치 */
+		System.out.print("[1]작성자 :");
+		String inputName = "\t"+scanner.nextLine();
+		System.out.print("[1]방문록 :");
+		String inputContent = "\t"+scanner.nextLine();
+		
+		boardlist = "1";
+		boardlist += inputName;
+		boardlist += inputContent;
+		
+		output += boardlist+"\n";
+		
+		System.out.println(header);
+		System.out.println(output);
+		System.out.println(footer);
+		
+		System.out.print("[2]작성자 :");
+		String inputName2 = "\t"+scanner.nextLine();
+		System.out.print("[2]방문록 :");
+		String inputContent2 = "\t"+scanner.nextLine();
+		
+		boardlist = "2";
+		boardlist += inputName2;
+		boardlist += inputContent2;
+		
+		output += boardlist+"\n";
+		
+		System.out.println(header);
+		System.out.println(output);
+		System.out.println(footer);
+		
+		System.out.print("[3]작성자 :");
+		String inputName3 = "\t"+scanner.nextLine();
+		System.out.print("[3]방문록 :");
+		String inputContent3 = "\t"+scanner.nextLine();
+		
+		boardlist = "3";
+		boardlist += inputName3;
+		boardlist += inputContent3;
+		
+		output += boardlist+"\n";
+		
+		System.out.println(header);
+		System.out.println(output);
+		System.out.println(footer);
+		System.out.print("[4]작성자 :");
+		String inputName4 = "\t"+scanner.nextLine();
+		System.out.print("[4]방문록 :");
+		String inputContent4 = "\t"+scanner.nextLine();
+		
+		boardlist = "4";
+		boardlist += inputName4;
+		boardlist += inputContent4;
+		
+		output += boardlist+"\n";
+		
+		System.out.println(header);
+		System.out.println(output);
+		System.out.println(footer);
+		
+		System.out.print("[5]작성자 :");
+		String inputName5 = "\t"+scanner.nextLine();
+		System.out.print("[5]방문록 :");
+		String inputContent5 = "\t"+scanner.nextLine();
+		
+		boardlist = "5";
+		boardlist += inputName5;
+		boardlist += inputContent5;
+		
+		output += boardlist+"\n";
+		
+		System.out.println(header);
+		System.out.println(output);
+		System.out.println(footer);
+		
 		
 		/* ----------- */
 	}

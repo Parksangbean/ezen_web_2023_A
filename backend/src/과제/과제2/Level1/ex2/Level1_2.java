@@ -10,7 +10,23 @@ public class Level1_2 {
 		System.out.printf("%-10s   %15s   %30s\n" , "type" , "value" , "range" );
 		System.out.println("-------------------------------------------------------------");
 		/* 문제풀이 위치 */
+		boolean bool= true;
+		byte a = 100;
+		char b ='A';
+		short c = 30000;
+		int d = 200000000;
+		long e = 2000000000;
+		float f = 3.123123f;
+		double g = 3.123123123;
 		
+		System.out.printf("%-10s %15s  %30s\n", "boolean",bool, "true or false");
+		System.out.printf("%-10s %15s %30s\n", "byte",a, "-128 ~ 127");
+		System.out.printf("%-10s %15s %30s\n", "char",b, "0~65535[ charcher 1 ]");
+		System.out.printf("%-10s %15s %30s\n", "short",c, "-32768 ~32767");
+		System.out.printf("%-10s %15s %30s\n", "int",d, "-+2000 million");
+		System.out.printf("%-10s %15s %30s\n", "long",e, "-+2000 million Excess");
+		System.out.printf("%-10s %15s %30s\n", "float",f, "8 decimal places");
+		System.out.printf("%-10s %15s %30s\n", "double",g, "17 decimal places");
 		/* ----------- */
 	}
 }
