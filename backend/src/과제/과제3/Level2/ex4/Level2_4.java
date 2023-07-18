@@ -16,10 +16,63 @@ public class Level2_4 {
 		System.out.print("가위 바위 보 선택 : ");
 		String player = scanner.next();
 		
+		
 		/* 문제풀이 위치 */
-		
-		
-		
+		// 2안 : 가위 바위 보 
+	      //if( player.equals("가위")) { }
+	      //else if( player.equals("바위") ) { }
+	      //else if( player.equals("보")) { }
+	      
+		  if(player.equals("가위")) {
+			  if(com==2) {
+				  System.out.println("comran) 보");
+				  System.out.println("result) player 승리");
+			  }
+			  else if(com==1) {
+				  System.out.println("comran) 바위");
+				  System.out.println("result) com 승리");
+			  }else {
+				  System.out.println("comran) 가위");
+				  System.out.println("result) 무승부");
+			  }
+		  }
+		  if(player.equals("바위")) {
+			  if(com==2) {
+				  System.out.println("comran) 보");
+				  System.out.println("result) com 승리");
+			  }
+			  else if(com==1) {
+				  System.out.println("comran) 바위");
+				  System.out.println("result) 무승부");
+			  }else {
+				  System.out.println("comran) 가위");
+				  System.out.println("result) player 승리");
+			  }
+		  }
+		  if(player.equals("보")) {
+			  if(com==2) {
+				  System.out.println("comran) 보");
+				  System.out.println("result) 무승부");
+			  }
+			  else if(com==1) {
+				  System.out.println("comran) 바위");
+				  System.out.println("result) player 승리");
+			  }else {
+				  System.out.println("comran) 가위");
+				  System.out.println("result) com 승");
+			  }
+		  }
+			  
+		  
+		  
+
+		  
+
+
+
+
+	      
+
 		/* ----------- */
 	}
 }
