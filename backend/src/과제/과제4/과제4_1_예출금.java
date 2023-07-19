@@ -18,23 +18,46 @@ public class 과제4_1_예출금 {
 			
 			/* 문제풀이 위치 */
 			if(ch==1) {
-				System.out.println("예금할 계좌번호: ");
+				System.out.println(">>>>예금할 계좌번호: ");
+				
 				if(scanner.next().equals(account)) {
-					System.out.println("예금할 금액를 입력해주세요: ");
-					int inputbalance =scanner.nextInt();
-					balance+=inputbalance;
-					System.out.println("예금후 금액: "+balance);
+					System.out.println(">>>예금할 금액 : ");
+					int money=scanner.nextInt();
+					balance+=money;
+					System.out.println(">>>예금후 금액: "+balance);
 				}else {
-					System.out.println("없는 계좌번호 입니다.");
-				}
-			}else if(ch==2) {
-				System.out.println("출금할 계좌번호: ");
-				if(scanner.next().equals(account)) {
-					System.out.println("계좌 비밀번호를 입력하세요: ");
-					
+					System.out.println(">>>없는 계좌번호 입니다.");
 				}
 			}
-			
+			else if(ch==2) {
+				System.out.println(">>>출금할 계좌번호: ");
+				if(scanner.next().equals(account)) {
+					System.out.println(">>>출금할 계좌 비밀번호를 입력해주세요: ");
+					int pwd=scanner.nextInt();
+					if(pwd==password){
+						System.out.println("출금할 금액: ");
+						int paymoney=scanner.nextInt();
+												
+						if(balance<paymoney) {
+							System.err.println(">>>>잔액부족: "+balance+"원");
+							
+						}else {
+							System.err.println("출금후 금액: "+(balance-=paymoney)+"원");
+						}
+					}else {
+						System.out.println(">>>계좌비밀번호가 다릅니다.");
+					}
+				}else {
+					System.out.println(">>>없는계좌입니다.");
+				}
+			}			
+			else if(ch==3) {
+				System.out.println(">>>잔액확인:"+balance+"원");
+			}
+			else if(ch==4) {
+				System.out.println(">>>프로그램 종료: ");
+				break;
+			}
 			
 			
 			/* ----------- */

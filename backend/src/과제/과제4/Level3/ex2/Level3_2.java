@@ -12,6 +12,16 @@ public class Level3_2 {
 		
 		
 		/* 문제풀이 위치 */
+		int i=1;
+		while(true) {
+			String input=scanner.next();
+			System.out.print(i+"회 입력: \n");
+			 if(input.equals("end")) {
+				 System.out.println("안내) 프로그램 종료 합니다.[총"+(i-1)+"회 입력]");
+				 break;
+			 }
+			 i++;
+		}
 		
 		/* ----------- */
 
