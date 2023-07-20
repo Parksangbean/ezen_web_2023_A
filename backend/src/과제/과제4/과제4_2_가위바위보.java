@@ -21,25 +21,25 @@ public class 과제4_2_가위바위보 {
 			플레이어 = scanner.nextInt();
 			
 			/* 문제풀이 위치 */
-			Random random=new Random();
+			Random random =new Random();
 			컴퓨터=random.nextInt(3);
 			System.out.println("컴퓨터가 낸 수: "+컴퓨터);
 			if(플레이어==3) {
-				System.out.println("[게임종료] :게임횟수 :"+게임수);
-				if(플레이어승리수>컴퓨터승리수) {
-					System.out.println("[최종승리자] : 플레이어 "+플레이어승리수);
-				}else if(컴퓨터승리수>플레이어승리수) {
-					System.out.println("[최종승리자] : 컴퓨터:  "+컴퓨터승리수);
-				}
+				System.out.println("[게임종료] : 게임횟수: "+게임수);
+				if(플레이어>컴퓨터) {
+					System.out.println("[ 최종 승리자 ] : 플레이어: "+플레이어승리수);
+				}else if(컴퓨터>플레이어) {
+					System.out.println("[ 최종 승리자 ] : 컴퓨터: "+컴퓨터승리수);
+				}	
 				break;
 			}
 			if(플레이어==컴퓨터) {
-				System.out.println(">>>>무승부");
+				System.out.println(">>>>>무승부");
 			}else if(플레이어==0&&컴퓨터==2||플레이어==1&&컴퓨터==0||플레이어==2&&컴퓨터==1) {
-				System.out.println(">>>>>플레이어 승리");
+				System.out.println("플레이어 승리");
 				플레이어승리수++;
 			}else {
-				System.out.println(">>>>>컴퓨터 승리");
+				System.out.println("컴퓨터 승리");
 				컴퓨터승리수++;
 			}
 			게임수++;
