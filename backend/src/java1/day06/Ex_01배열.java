@@ -91,7 +91,10 @@ public class Ex_01배열 {
 				}
 			}
 			
-		
+			int count = 0; // 모든 경우의수 if { } 에서 공유하기 위해 if { } 밖에서 선언 
+			int[] scores = new int[count]; 
+			System.out.println(Arrays.toString(scores));
+			
  	}
 }
 /*
