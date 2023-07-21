@@ -18,38 +18,36 @@ public class 과제4_1_예출금 {
 			
 			/* 문제풀이 위치 */
 			if(ch==1) {
-				System.out.println("예금할 계좌번호: "); String account2=scanner.next();
-				if(account.equals(account2)) {
-					System.out.println("예금할 금액: "); int money =scanner.nextInt(); 
-					balance+=money;
-					System.out.println("예금후 금액: "+balance);
+				System.out.println(">>>>>예금할 계좌번호: "); String number=scanner.next();
+				if(account.equals(number)) {
+					System.out.println(">>>>>예금할 금액: "); int pay =scanner.nextInt();
+					System.out.println(">>>>>예금후 금액: "+(balance+=pay));
 				}else {
-					System.out.println("없는 계좌번호 입니다.");
+					System.out.println(">>>>>없는 계좌번호 입니다.");
 				}
 			}
 			else if(ch==2) {
-				System.out.println("출금할 계좌번호: ");String account2=scanner.next();
-				if(account.equals(account2)) {
-					System.out.println("계좌 비밀번호: "); int pwd=scanner.nextInt();
-					if(password==pwd) {		
-						System.out.println("출금할 금액: "); int money2 =scanner.nextInt();
-						if(balance<money2) {
-							System.out.println("잔액 부족: "+balance);
+				System.out.println(">>>>>출금할 계좌번호: "); String number=scanner.next();
+				if(account.equals(number)) {
+					System.out.println("계좌 비밀번호: ");  short pwd =scanner.nextShort();
+					if(password==pwd) {
+						System.out.println(">>>>출금할 금액: "); int pay =scanner.nextInt();
+						
+						if(balance<pay) {
+							System.out.println(">>>잔액부족 :"+balance);
 						}else {
-							System.out.println("출금후 금액: "+(balance-=money2)+"원");
+							System.out.println(">>>>출금후 금액: "+(balance-=pay));
 						}
-					}else {
-						System.out.println("계좌 비밀번호가 일치하지 않습니다.");
 					}
-				}else {
-					System.out.println("없는 계좌입니다.");
-				}
+				
+				}		
 			}
 			else if(ch==3) {
-				System.out.println("잔액 확인: "+balance);
+				System.out.println("잔액 조회: "+balance);
 			}
 			else if(ch==4) {
-				System.out.println("시스템 종료합니다.[안녕히가세요.]");
+				System.out.println(">>>종료");
+				break;
 			}
 			
 			/* ----------- */
