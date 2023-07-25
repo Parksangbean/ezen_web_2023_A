@@ -1,4 +1,4 @@
-package 과제.과제8;
+package 과제.과제9;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -29,17 +29,9 @@ public class MemberSys {
 				System.out.println("나이: ");			int inputAge= scanner.nextInt();
 				// 2. 5가지를 하나서 묶음 = 문자열vs객체
 				// * 객체선언 : 클래스명 객체변수명 = new 생성자명();
-				Member member = new Member();
-				System.out.println(Arrays.toString(memberList));
-				// * 객체내 필 드 수정
-				// * .(도트연산자) : 접근연산자 (스택변수가 알고있는 객체주소로 가)
-				member.id = inputId;
-				member.password = inputPw;
-				member.name = inputName;
-				member.number = inputNumber;
-				member.age = inputAge;
-				// 3. 여러개의 객체를 저장하기 위해 배열에 저장
-					// * 비어있는인덱스 = 기본값인덱스를 찾아서 해당 인덱스에 객체 저장
+				// 1안
+				Member member =new Member(inputId, inputPw, inputName, inputNumber, inputAge);
+				
 				for(int i=0; i<memberList.length; i++) {
 					// 만약에 i번째 인덱스에 null 이면 해당 i번째 객체 타입
 					if(memberList[i]==null) {memberList[i]=member; break;}

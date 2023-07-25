@@ -46,7 +46,7 @@ public class 과제5_키오스크_배열 {
 				// 1. 배열변수명 호출 
 				// String[] 재고관리 = { "10,0,300,콜라" , "10,0,200,환타" , "10,0,100,사이다"};
 				String product = 재고관리[ch-1];	
-					System.out.println( ch + " 번 제품 : " + product );
+				System.out.println( ch + " 번 제품 : " + product );
 				// 2. 배열내 데이터[문자열] 분리
 				int stock = Integer.parseInt( product.split(",")[0] );
 				int basket = Integer.parseInt( product.split(",")[1] );
@@ -62,7 +62,7 @@ public class 과제5_키오스크_배열 {
 				재고관리[ch-1] = stock+","+basket+","+price+","+name;
 			}
 			else if( ch == 4 ) {
-				System.out.printf("%10s %15s %15s \n" , "제품명" , "수량" , "가격");
+				System.out.printf("%10s %13s %13s \n" , "제품명" , "수량" , "가격");
 				for( int i = 0 ; i<재고관리.length ; i++ ) {
 					int basket = Integer.parseInt( 재고관리[i].split(",")[1] );
 					int price = Integer.parseInt( 재고관리[i].split(",")[2] );
