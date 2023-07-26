@@ -14,29 +14,7 @@ public class 과제5_키오스크 {
 	
 		
 		/* ----------- */
-		String 재고 =재고관리.split("-")[0];	// 배열로 나누고 0은콜라 1은 환타 2는사이다
-				String 콜라 = 재고.split(",")[0];
-				int 콜라재고= Integer.parseInt(콜라);
-				String 환타 = 재고.split(",")[1];
-				int 환타재고 = Integer.parseInt(환타);
-				String 사이다 = 재고.split(",")[2];
-				int 사이다재고 = Integer.parseInt(사이다);
-				
-		String 장바구니 = 재고관리.split("-")[1];
-			String 콜라바구니=장바구니.split(",")[0];
-			int 콜라장바구니=Integer.parseInt(콜라바구니); 
-			String 사이다바구니=장바구니.split(",")[1];
-			int 사이다장바구니=Integer.parseInt(사이다바구니); 
-			String 환타바구니=장바구니.split(",")[2];
-			int 환타장바구니=Integer.parseInt(환타바구니); 
-				
-		String 가격 =재고관리.split("-")[2];
-			String 콜라가격=가격.split(",")[0];
-			int 콜라1=Integer.parseInt(콜라가격);
-			String 환타가격 = 가격.split(",")[1];
-			int 환타1=Integer.parseInt(환타가격);
-			String 사이다가격 = 가격.split(",")[2];
-			int 사이다1=Integer.parseInt(사이다가격);
+		
 			
 			int 주문번호=0;
 			int 총수량=0;
@@ -45,6 +23,17 @@ public class 과제5_키오스크 {
 			System.out.println("1.콜라[300] 2.환타[200] 3.사이다[100] 4.결제");
 			System.out.print(">>>>>> 선택 : "); int ch = scanner.nextInt();
 			
+			int 콜라재고=Integer.parseInt(재고관리.split("-")[0].split(",")[0]);
+			int 콜라장바구니 =Integer.parseInt(재고관리.split("-")[1].split(",")[0]);
+			int 콜라가격=Integer.parseInt(재고관리.split("-")[2].split(",")[0]);
+			
+			int 환타재고=Integer.parseInt(재고관리.split("-")[0].split(",")[1]);
+			int 환타장바구니 =Integer.parseInt(재고관리.split("-")[1].split(",")[1]);
+			int 환타가격=Integer.parseInt(재고관리.split("-")[2].split(",")[1]);
+			
+			int 사이다재고=Integer.parseInt(재고관리.split("-")[0].split(",")[2]);
+			int 사이다장바구니 =Integer.parseInt(재고관리.split("-")[1].split(",")[2]);
+			int 사이다가격=Integer.parseInt(재고관리.split("-")[2].split(",")[2]);
 			if(ch==1) {
 				//step2 : 기능 구현
 				// 1. 콜라를 선택
@@ -57,14 +46,15 @@ public class 과제5_키오스크 {
 					System.out.println("- 현재 장바구니 현황 표시 목록");
 					System.out.println("-------------------------------------");
 					System.out.printf("%3s %2s %4s\n","제품명","수량","가격");
-					System.out.printf("%3s %3d %6d\n","콜라",콜라장바구니,(콜라장바구니*콜라1));
+					System.out.printf("%3s %3d %6d\n","콜라",콜라장바구니,(콜라장바구니*콜라가격));
 					System.out.println("-------------------------------------");
-					System.out.printf("%3s %3d %6d\n","사이다",사이다장바구니,(사이다장바구니*사이다1));
+					System.out.printf("%3s %3d %6d\n","사이다",사이다장바구니,(사이다장바구니*사이다가격));
 					System.out.println("-------------------------------------");
-					System.out.printf("%3s %3d %6d\n","환타",환타장바구니,(환타장바구니*환타1));
+					System.out.printf("%3s %3d %6d\n","환타",환타장바구니,(환타장바구니*환타가격));
 					System.out.println("-------------------------------------");
+					System.out.println("총수량: "+총수량);
+					System.out.printf("총합계: %3d",(환타장바구니*환타가격)+(사이다장바구니*사이다가격)+(콜라장바구니*콜라가격));
 					
-					System.out.printf("총합계: %3d",(환타장바구니*환타1)+(사이다장바구니*사이다1)+(콜라장바구니*콜라1));
 				}
 				else {
 					System.out.println("안내) 콜라 재고가 없습니다.[관레자에게 문의]");
@@ -79,14 +69,14 @@ public class 과제5_키오스크 {
 					System.out.println("- 현재 장바구니 현황 표시 목록");
 					System.out.println("-------------------------------------");
 					System.out.printf("%3s %2s %4s\n","제품명","수량","가격");
-					System.out.printf("%3s %3d %6d\n","콜라",콜라장바구니,(콜라장바구니*콜라1));
+					System.out.printf("%3s %3d %6d\n","콜라",콜라장바구니,(콜라장바구니*콜라가격));
 					System.out.println("-------------------------------------");
-					System.out.printf("%3s %3d %6d\n","사이다",사이다장바구니,(사이다장바구니*사이다1));
+					System.out.printf("%3s %3d %6d\n","사이다",사이다장바구니,(사이다장바구니*사이다가격));
 					System.out.println("-------------------------------------");
-					System.out.printf("%3s %3d %6d\n","환타",환타장바구니,(환타장바구니*환타1));
+					System.out.printf("%3s %3d %6d\n","환타",환타장바구니,(환타장바구니*환타가격));
 					System.out.println("-------------------------------------");
 					System.out.println("총수량: "+총수량);
-					System.out.printf("총합계: %3d",(환타장바구니*환타1)+(사이다장바구니*사이다1)+(콜라장바구니*콜라1));
+					System.out.printf("총합계: %3d",(환타장바구니*환타가격)+(사이다장바구니*사이다가격)+(콜라장바구니*콜라가격));
 				}else {
 					System.out.println("안내) 환타 재고가 없습니다.[관레자에게 문의]");
 				}
@@ -100,14 +90,14 @@ public class 과제5_키오스크 {
 					System.out.println("- 현재 장바구니 현황 표시 목록");
 					System.out.println("-------------------------------------");
 					System.out.printf("%3s %2s %4s\n","제품명","수량","가격");
-					System.out.printf("%3s %3d %6d\n","콜라",콜라장바구니,(콜라장바구니*콜라1));
+					System.out.printf("%3s %3d %6d\n","콜라",콜라장바구니,(콜라장바구니*콜라가격));
 					System.out.println("-------------------------------------");
-					System.out.printf("%3s %3d %6d\n","사이다",사이다장바구니,(사이다장바구니*사이다1));
+					System.out.printf("%3s %3d %6d\n","사이다",사이다장바구니,(사이다장바구니*사이다가격));
 					System.out.println("-------------------------------------");
-					System.out.printf("%3s %3d %6d\n","환타",환타장바구니,(환타장바구니*환타1));
+					System.out.printf("%3s %3d %6d\n","환타",환타장바구니,(환타장바구니*환타가격));
 					System.out.println("-------------------------------------");
 					System.out.println("총수량: "+총수량);
-					System.out.printf("총합계: %3d",(환타장바구니*환타1)+(사이다장바구니*사이다1)+(콜라장바구니*콜라1));
+					System.out.printf("총합계: %3d",(환타장바구니*환타가격)+(사이다장바구니*사이다가격)+(콜라장바구니*콜라가격));
 				}else {
 					System.out.println("안내) 사이다 재고가 없습니다.[관레자에게 문의]");
 				}
@@ -117,14 +107,14 @@ public class 과제5_키오스크 {
 				System.out.println("- 현재 장바구니 현황 표시 목록");
 				System.out.println("-------------------------------------");
 				System.out.printf("%3s %2s %4s\n","제품명","수량","가격");
-				System.out.printf("%3s %3d %6d\n","콜라",콜라장바구니,(콜라장바구니*콜라1));
+				System.out.printf("%3s %3d %6d\n","콜라",콜라장바구니,(콜라장바구니*콜라가격));
 				System.out.println("-------------------------------------");
-				System.out.printf("%3s %3d %6d\n","사이다",사이다장바구니,(사이다장바구니*사이다1));
+				System.out.printf("%3s %3d %6d\n","사이다",사이다장바구니,(사이다장바구니*사이다가격));
 				System.out.println("-------------------------------------");
-				System.out.printf("%3s %3d %6d\n","환타",환타장바구니,(환타장바구니*환타1));
+				System.out.printf("%3s %3d %6d\n","환타",환타장바구니,(환타장바구니*환타가격));
 				System.out.println("-------------------------------------");
 				if(콜라장바구니==0&&사이다장바구니==0&&환타장바구니==0) {System.out.println("이미 비어있습니다.[장바구니를 확인해주세요]");}
-				int 총가격 =콜라장바구니*콜라1+사이다장바구니*사이다1+환타장바구니*환타1;
+				int 총가격 =콜라장바구니*콜라가격+사이다장바구니*사이다가격+환타장바구니*환타가격;
 				System.out.println("총수량: "+총수량);
 				System.out.println("총가격:"+총가격);
 				System.out.println("-------------------------------------");
@@ -141,11 +131,11 @@ public class 과제5_키오스크 {
 						사이다장바구니= 0;
 						System.out.println("주문 번호: "+주문번호); 
 						주문번호++;
+						총수량=0;
 					}
 					else {
 						// 구매실패 // 장바구니 초기화 // 재고 원상복귀
-						System.out.println("구매실패");
-						
+						System.out.println("구매실패");				
 						콜라재고+=콜라장바구니; 콜라장바구니=0;
 						사이다재고+=사이다장바구니; 사이다장바구니=0;
 						환타재고+=환타장바구니; 환타재고=0;
