@@ -32,7 +32,7 @@ public class part3 {
 			else if(ch==4) {
 				System.out.println("--------------------");
 				System.out.printf("%10s %10s %10s\n","제품명","수량","가격");
-				
+				int sum=0;
 				int  총가격=0;
 				for(int i=0; i<재고관리.length; i++) {
 					int basket =Integer.parseInt(재고관리[i].split(",")[1]);
@@ -40,10 +40,12 @@ public class part3 {
 					String name=재고관리[i].split(",")[3];
 					
 					if(basket>0) {
-						System.out.printf("%10s %10s %10s\n",name,basket,basket*price);		
+						System.out.printf("%10s %10s %10s\n",name,basket,basket*price);	
+						sum+=basket*price;
 						
 					}
 				}
+				System.out.printf("총가격:\n"+sum);
 			}
 		}
 	}

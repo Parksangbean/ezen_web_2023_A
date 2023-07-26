@@ -18,11 +18,7 @@ public class Member {
 		this.password = password;
 		this.name = name;
 		this.number = number;
-		this.age = age;
-		
-		//클래스 빈 공간 클릭
-		
-		
+		this.age = age;	
 	}	
 	//1. 매게 변수 5개 정의한 생성자
 	/*
