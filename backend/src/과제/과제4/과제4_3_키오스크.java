@@ -16,98 +16,68 @@ public class 과제4_3_키오스크 {
 		int 주문번호 =1;
 		
 		while(true) {
-			System.out.println("\n\n-------------------- 메뉴 ------------------- ");
-			System.out.println("1.콜라[300] 2.환타[200] 3.사이다[100] 4.결제");
-			System.out.print(">>>>>> 선택 : "); int ch = scanner.nextInt();
+			System.out.println("-------- 자판기 ----------");
+			System.out.println("1.콜라[300] 2.환타[200] 3. 사이다[100] 4. 결제");	int ch=scanner.nextInt();
 			
-			/* 문제풀이 위치 */
-			// step1 : 메뉴 번호선택 입력에 따른 서로 다른 실행/코드
 			if(ch==1) {
-				//step2 : 기능 구현
-				// 1. 콜라를 선택
-				// 1. 콜라 재고가 있으면 바구니에 담아 없으면 재고부족!!
 				if(콜라재고>0) {
-					콜라바구니++; //콜라바구니 변수에콜라 1개추가 /중가
-					콜라재고--;	// 콜라재고 변수에 콜라 1개 감소 
-					System.out.println("안내) 콜라를 담았습니다.");
-				}
-				else {
-					System.out.println("안내) 콜라 재고가 없습니다.[관레자에게 문의]");
+					콜라바구니++; 콜라재고--; System.out.println("콜라를 장바구니에 담았습니다.");
+				}else {
+					System.out.println("안내) 재고부족 [관리자에게 문의 바람]");
 				}
 			}
 			else if(ch==2) {
 				if(환타재고>0) {
-					환타바구니++;
-					환타재고--;
-					System.out.println("안내) 환타를 담았습니다.");			
+					환타바구니++; 환타재고--; System.out.println("환타를 장바구니에 담았습니다.");
 				}else {
-					System.out.println("안내) 환타 재고가 없습니다.[관레자에게 문의]");
+					System.out.println("안내) 재고부족 [관리자에게 문의 바람]");
 				}
 			}
 			else if(ch==3) {
 				if(사이다재고>0) {
-					사이다바구니++;
-					사이다재고--;
-					System.out.println("안내) 사이다를 담았습니다.");			
+					사이다바구니++; 사이다재고--; System.out.println("사이다를 장바구니에 담았습니다.");
 				}else {
-					System.out.println("안내) 사이다 재고가 없습니다.[관레자에게 문의]");
+					System.out.println("안내) 재고부족 [관리자에게 문의 바람]");
 				}
 			}
 			else if(ch==4) {
-				// 1. 변수/장바구니네 데이터/개수 출력
-				System.out.println("- 현재 장바구니 현황 표시 목록");
-				System.out.println("-------------------------------------");
-				System.out.printf("%3s %2s %4s\n","제품명","수량","가격");
-				System.out.printf("%3s %3d %6d\n","콜라",콜라바구니,(콜라바구니*콜라가격));
-				System.out.println("-------------------------------------");
-				System.out.printf("%3s %3d %6d\n","사이다",사이다바구니,(사이다바구니*사이다가격));
-				System.out.println("-------------------------------------");
-				System.out.printf("%3s %3d %6d\n","환타",환타바구니,(환타바구니*환타가격));
-				System.out.println("-------------------------------------");
-				int 총가격 =콜라바구니*콜라가격+사이다바구니*사이다가격+환타바구니*환타가격;
-				System.out.println("총가격:"+총가격);
-				if(콜라바구니==0&&사이다바구니==0&&환타바구니==0) {System.out.println("이미 비어있습니다.[장바구니를 확인해주세요]");}
-				System.out.println("-------------------------------------");
-				System.out.println("1.결제 2.취소: "); int ch2 = scanner.nextInt();
+				System.out.println("-현재 장바구니 현황 표시 목록-");
+				System.out.println("---------------------------------------------");
+				System.out.printf("%10s %8s %8s\n","제품명","수량","가격");
+				System.out.printf("%10s %8d %10d\n","콜라",콜라바구니,콜라바구니*콜라가격);
+				System.out.printf("%10s %8d %10d\n","환타",환타바구니,환타바구니*환타가격);
+				System.out.printf("%10s %8d %10d\n","사이다",사이다바구니,사이다바구니*사이다가격);
+				System.out.println("---------------------------------------------");
+				
+				if(콜라바구니==0&&사이다바구니==0&&환타바구니==0) {System.out.println("장바구니가 비어있습니다 다시 확안해주세요");}
+				int 총수량=(콜라바구니+환타바구니+사이다바구니);
+				System.out.printf("%10s %10d\n","총수량: ",총수량);
+				int 총가격=(콜라바구니*콜라가격)+(환타바구니*환타가격)+(사이다바구니*사이다가격);
+				System.out.printf("%10s %20d\n","총가격: ", 총가격);
+				
+				System.out.println("1. 결제 2. 취소"); int ch2 = scanner.nextInt();
+				
 				if(ch2==1) {
-					System.out.println("안내 금액 투여 : ");int pay=scanner.nextInt();
-					//2. 만약에 총가격보다 금액이 더크면 성공 아니면 실패
-					
+					System.out.println("결제할 금액을 입력해주세요: ");int pay=scanner.nextInt();
 					if(pay>=총가격) {
-						System.out.println("잔돈 :" +(pay-총가격));
-						// 구맹성공 // 바구니만 초기화
-						콜라바구니 = 0;
-						환타바구니= 0;
-						사이다바구니= 0;
-						System.out.println("주문 번호: "+주문번호);
-						
-						주문번호++;
-					}
-					else {
-						// 구매실패 // 장바구니 초기화 // 재고 원상복귀
-						System.out.println("구매실패");
-						
-						콜라재고+=콜라바구니; 콜라바구니=0;
-						사이다재고+=사이다바구니; 사이다바구니=0;
-						환타재고+=환타바구니; 환타재고=0;
+						System.out.println("안내) 잔돈: "+(pay-총가격)+"원 입니다.");
+						콜라바구니=0; 사이다바구니=0; 환타바구니=0;
+					}else {
 						System.err.println("안내) 투여 금액이 부족합니다. [초기메뉴로 돌아갑니다.]");
+						콜라재고+=콜라바구니; 콜라바구니=0;
+						환타재고+=환타바구니; 환타바구니=0;
+						사이다재고+=사이다바구니; 사이다바구니=0;
 						
 					}
 				}
-				else if(ch2==2) { // 취소 선택 ==2
-					// 구매 취소 했기때문에 원상복귀
+				else if(ch2==2) {
 					콜라재고+=콜라바구니; 콜라바구니=0;
+					환타재고+=환타바구니; 환타바구니=0;
 					사이다재고+=사이다바구니; 사이다바구니=0;
-					환타재고+=환타바구니; 환타재고=0;
 					System.err.println("안내) 장바구니를 초기화했습니다. [초기메뉴로 돌아갑니다.]");
 				}
 			}
-			
-			
-			/* ----------- */
-			
-			
-		} // while end 
+		}
 	} // main end 
 	
 } // class end 
