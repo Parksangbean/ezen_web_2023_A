@@ -34,19 +34,25 @@ public BoardDto printLogic(int index) {
 	
 	
 	
-	// 2. 호출한 dto 를 리턴하기
+	// 2. 호출한 Dto 를 리턴하기
 		return boardDto;
-}	 
+}	
+// 글수정 처리 기능함수
+public boolean updateLogic(int index , String content , String writer) {
+	// 1. 입력받은 인덱스의 개시물을 호출해서 새로운 입력받은 값으로 대입
+	BoardDao.getInstance().boardDtoList.get(index).setContent(content);
+		// BoardDao.getInstance().boardDtoList.get(index) = content 	// * DTO 필드의 직접접근X -> set , get 간접접근o
+	BoardDao.getInstance().boardDtoList.get(index).setWriter(writer);
+	return true;
+
+}
+
+
 	// 글삭제 처리 기능함수
 public boolean deleteLogic(int index) {
 	// 1. 리스트 안에 있는 객체 호출 .get(인덱스) : 해당 인덱스 객체 호출
 	BoardDao.getInstance().boardDtoList.remove(index);
 	return true;
-	
-}	
-	// 글수정 처리 기능함수
-public void updateLogic() {
-	
-	
 	}
 }
+

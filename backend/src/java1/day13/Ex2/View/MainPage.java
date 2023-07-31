@@ -25,6 +25,7 @@ public class MainPage {
 	// 메인페이지 입출력 함수 
 	public void mainView() {
 		while(true) {
+			System.out.println("확인용] " + BoardDao.getInstance().boardDtoList );
 			System.out.println("\n\n >>>>> 방문록 프로그램 >>>>>");
 			System.out.print("1.글등록 2.글보기 3.글삭제 4.글수정 선택> ");
 			int ch = sc.nextInt();
@@ -76,8 +77,18 @@ public class MainPage {
 			else {System.out.println("안내] 삭제 실패");}
 		}	
 		// 글수정 페이지 입출력 함수
-		public void updateView() {
-			BoardController.getInstance().updateLogic();
+		public void updateView( ) {
+			
+			System.out.println("안내] 방문록 수정 페이지"); 
+			System.out.println("수정할 방문록 인덱스 번호 :");	int index =sc.nextInt(); 
+			sc.nextLine();
+			System.out.println("수정할 내용: ");					String content = sc.nextLine();
+			System.out.println("수정할 작성자 : ");					String writer = sc.nextLine();
+			// 2 앱력받은 벼수를 컨틀올에게 전달보내기 결과를 리턴 받음
+			boolean result = BoardController.getInstance().updateLogic(index , content , writer);
+			
+			if(result) {System.out.println("안내] 수정 성공");}
+			else {System.out.println("안내] 수정 실패");}
+			
 		}
-	
 }
