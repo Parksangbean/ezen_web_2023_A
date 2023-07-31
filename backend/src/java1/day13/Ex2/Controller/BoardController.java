@@ -40,7 +40,7 @@ public BoardDto printLogic(int index) {
 	// 글삭제 처리 기능함수
 public boolean deleteLogic(int index) {
 	// 1. 리스트 안에 있는 객체 호출 .get(인덱스) : 해당 인덱스 객체 호출
-	
+	BoardDao.getInstance().boardDtoList.remove(index);
 	return true;
 	
 }	

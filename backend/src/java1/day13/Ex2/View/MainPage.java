@@ -71,8 +71,9 @@ public class MainPage {
 			System.out.println("안내] 삭제할 게시물의 인덱스: "); int index = sc.nextInt();
 			// 2. view 에서 컨트롤에게 입력받아 인덱스 전달보내고 삭제결과 여부 리턴 받음
 			boolean result = BoardController.getInstance().deleteLogic(index);
-			
-			
+			// 3. 리턴 결과에 따른 제어
+			if(result) {System.out.println("안내] 삭제 성공");}
+			else {System.out.println("안내] 삭제 실패");}
 		}	
 		// 글수정 페이지 입출력 함수
 		public void updateView() {
