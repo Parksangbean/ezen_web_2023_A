@@ -11,20 +11,18 @@ public class part4 {
 		
 		while(true) {
 			Scanner sc =new Scanner(System.in);
-			
-			String filePath ="./src/복습/part4/part4.txt";
+			String filePath = "./src/복습/part4/part4.txt";
 			FileOutputStream fileOutputStream = new FileOutputStream(filePath,true);
 			FileInputStream fileInputStream = new FileInputStream(filePath);
 			File file = new File(filePath);
 			
 			byte[] inByteArray = new byte[(int)file.length()];
 			String fileInfo = new String(inByteArray);
-			String [] 재고관리 =fileInfo.split("\n");
+			String[ ] 재고관리 = fileInfo.split("\n");
 			
-			System.out.println("-----------메뉴----------[");
-			System.out.println("-1: 제품등록 0: 결제");
-			
-			
+			for(int i = 0; i<재고관리.length; i++) {
+				String name = 재고관리[i].split(",")[0];
+			}
 		}
 	}
 }

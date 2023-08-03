@@ -45,6 +45,22 @@ public class 연습 {
 				fileOutputStream.write(outStr.getBytes());
 				System.out.println("안내) 제품이 등록 되었습니다.");
 			}
+			else if(ch>0&&ch<=재고관리.length) {
+				String name = 재고관리[ch-1].split(",")[0];
+				int stock = Integer.parseInt(재고관리[ch-1].split(",")[1]);
+				int price = Integer.parseInt(재고관리[ch-1].split(",")[2]);
+				int basket = Integer.parseInt(재고관리[ch-1].split(",")[3]);
+				
+				if(stock>0) {
+					stock--; basket++; System.out.println(name+"재고 담음");
+				}else {
+					System.out.println(name+"재고부족");
+				}
+				재고관리[ch-1]=name+","+stock+","+price+","+basket+"\n";
+				
+				FileOutputStream fileOutputStream2 = new FileOutputStream(filePath);
+				fileOutputStream2.write(inByteArray);
+			}
 		}
 	}
 }
