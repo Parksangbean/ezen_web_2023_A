@@ -7,7 +7,7 @@ import java.util.Scanner;
 // import java.util.*;			// 해당 패키지내 모든 클래스 호출
 
 public class MemberSys {
-   static  int login = -1;
+   
    static Member[] memberList = new Member[100];
    static Scanner sc = new Scanner(System.in);
    
@@ -45,7 +45,7 @@ public class MemberSys {
    static void 로그인 () { 
       System.out.println("아이디를 입력해주세요: "); String id=sc.next();
       System.out.println("비밀번호를 입력해주세요: "); String pw=sc.next();
-     
+      int login = -1;
       for(int i =0; i<memberList.length; i++) {
          if(memberList[i]!=null && memberList[i].id.equals(id)&&memberList[i].password.equals(pw)) {
             login=i;
