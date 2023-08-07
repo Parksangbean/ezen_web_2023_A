@@ -16,7 +16,7 @@ public class MemberController {
 		// 유효성검사 했다치고
 		// 1. 객체화 : 5개 변수들이 이동 할때마다 매개변수의 코드 길어지니까..패키지화
 		MemberDto dto = new MemberDto(0 , id,password,name,number);
-		// 2. Dao 에게 전달하고 SQL 결과 받기
+		// 2. Dao 에게 전달하고  SQL 결과 받기
 		boolean result=
 		MemberDao.getInstance().signupSQL(dto);
 		
