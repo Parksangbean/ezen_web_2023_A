@@ -11,3 +11,4 @@ public interface 게임패드 {
 	void X버튼();
 	void Y버튼();
 }
+ 

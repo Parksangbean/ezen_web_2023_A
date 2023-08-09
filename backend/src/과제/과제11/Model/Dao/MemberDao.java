@@ -10,6 +10,28 @@ public class MemberDao extends Dao{
 	private MemberDao() { }
 	
 	
+	// 1. 회원정보 Check SQL : type = 1 아이디중복체크 type = 2전화번호중복체크
+	public boolean infoCheck(String 검색할필드명 , String 검색할값) {
+		
+		try {
+				String sql ="select * from member where "+검색할필드명+" = ?"; 
+				ps = conn.prepareStatement(sql);
+				ps.setString(1, 검색할값);
+				rs=ps.executeQuery();
+				if(rs.next()) {return true;}
+			
+			
+		}catch (Exception e) {System.out.println(e);}
+		
+		return false;
+	}
+	
+	
+	
+	
+	
+	
+	
 	//2. 회원가입SQL
 	public boolean signupSQL(MemberDto dto) {
 		System.out.println("----------signupSQL 도착");
@@ -37,7 +59,7 @@ public class MemberDao extends Dao{
 	}
 	
 	//3. 로그인SQL
-	public boolean loginSQL(String id , String password) {
+	public int loginSQL(String id , String password) {
 		
 		//1단계 : sql 작성한다. [ 추천: mysql 워크밴치에서 임의값 테스트하고]
 		try {
@@ -54,9 +76,90 @@ public class MemberDao extends Dao{
 			//만약에 결과의 레코드 3개 가정 [ rs = null -> 레코드1 -> 레코드2 -> 레코드3]
 			//																.next()
 		if(rs.next() ) { // 로그인은 레코드가 1개 또는 0개 이므로 if 사용해서 .next() 1번 호출
-			return true;			
+			return rs.getInt(1);	//  검색된 회원번호를 반환		
 			}
 		}catch (Exception e) {System.out.println(e);}
-		return false;
+		return 0; // 로그인 실패 
 	}
+	
+	//4.
+		public String findById(String name, String number) {
+			try {
+				// try{} 안에 예외가 발생할것 같은 , 일반예외 : jdbc
+				// 1단계 : sql 작성
+				String sql="select mid from member where mname = ? and mnumber = ?";
+				// 2단계 : 작성된 sql를 조작할 prepareStatement 객체를 연동객체로 부터 반환
+				ps=conn.prepareStatement(sql);
+				// 3단계 : sql조작[매개변수 대입]
+				ps.setString(1, name);
+				ps.setString(2, number);
+				// 4단계 : sql 실행 select =executeQuery
+				rs=ps.executeQuery();
+				// sql 결과 조작
+					// rs.next()					: 검색된 레코드중 다음레코드 이동
+					// rs.getNString()		: 현재 위치한 레코드의 필드값 호출 
+				if(rs.next()) {return rs.getString(1);} // 검색된 레코드중 1번째 필드인 id값을 반환
+				
+			}catch (Exception e) {System.out.println(e);}
+			
+			return null; // 실패
+		}
+		
+		//5.
+		public String findByPw(String id, String number) {
+			try {
+				String sql="select mpw from member where mid = ? and mnumber = ?";
+				ps=conn.prepareStatement(sql);
+				ps.setString(1, id);
+				ps.setString(2, number);
+				rs=ps.executeQuery();
+				if(rs.next()) {return rs.getString(1);}
+			}catch (Exception e) {System.out.println(e);}
+			
+			return null; // 실패
+		}
+		
+		// 6. 회원번호를 가지고 회원정보 찾기 .. 회원번호가 존재하는 레코드 찾기
+		public MemberDto info(int mno) {
+			try {
+				String sql = "select * from member where mno_pk =? ";
+				ps=conn.prepareStatement(sql);
+				ps.setInt(1, mno);
+				// 4. sql 실행 //5. sql결과 조작 객체
+				rs = ps.executeQuery();
+				//6. sql 결과 조작
+				if(rs.next()) { // 만약에 다음레코드가 존재하면
+					// 현재 레코드를 DTO로 만들기
+					MemberDto dto = new MemberDto(
+						rs.getInt(1) , rs.getString(2),rs.getString(3), 
+						rs.getString(4),rs.getString(5));
+					return dto;
+				}
+			}catch (Exception e) {System.out.println(e);}
+			
+			return null;
+		}
+		
+		public boolean infoUpdate(String newPw , int mno) {
+			try {
+			String sql="update member set mpw = ? where mno_pk = ? ";
+			ps=conn.prepareStatement(sql);
+			ps.setString(1, newPw); 
+			ps.setInt(2, mno);
+			int row = ps.executeUpdate();
+			if(row ==1) return true;
+			}catch (Exception e) {System.out.println(e);}
+			return false;
+		}
+		
+		public boolean infoDelete( int mno ) {
+			try {
+				String sql = "delete from member where mno_pk = ? ";
+				ps = conn.prepareStatement(sql);
+				ps.setInt( 1 , mno); 
+				int row = ps.executeUpdate();	// [ 삭제한 레코드 개수 반환 ] 
+				if( row == 1 ) return true;
+			}catch (Exception e) {System.out.println(e);}
+			return false; // 실패 
+		}
 }
