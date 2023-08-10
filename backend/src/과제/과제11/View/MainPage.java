@@ -25,7 +25,7 @@ public class MainPage {
 			if(ch==3) {findById();}
 			if(ch==4) {findByPw();}
 			}catch(Exception e) {
-				System.out.println("경고] 잘못 입력했습니다.");
+				System.out.println("경고] 잘못 입력했습니다."+e);
 				sc = new Scanner(System.in);
 			}
 		}

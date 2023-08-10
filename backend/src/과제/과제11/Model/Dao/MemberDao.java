@@ -122,7 +122,7 @@ public class MemberDao extends Dao{
 		// 6. 회원번호를 가지고 회원정보 찾기 .. 회원번호가 존재하는 레코드 찾기
 		public MemberDto info(int mno) {
 			try {
-				String sql = "select * from member where mno_pk =? ";
+				String sql = "select * from member where mno=? ";
 				ps=conn.prepareStatement(sql);
 				ps.setInt(1, mno);
 				// 4. sql 실행 //5. sql결과 조작 객체
@@ -142,7 +142,7 @@ public class MemberDao extends Dao{
 		
 		public boolean infoUpdate(String newPw , int mno) {
 			try {
-			String sql="update member set mpw = ? where mno_pk = ? ";
+			String sql="update member set mpw = ? where mno= ? ";
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, newPw); 
 			ps.setInt(2, mno);
@@ -154,7 +154,7 @@ public class MemberDao extends Dao{
 		
 		public boolean infoDelete( int mno ) {
 			try {
-				String sql = "delete from member where mno_pk = ? ";
+				String sql = "delete from member where mno= ? ";
 				ps = conn.prepareStatement(sql);
 				ps.setInt( 1 , mno); 
 				int row = ps.executeUpdate();	// [ 삭제한 레코드 개수 반환 ] 
