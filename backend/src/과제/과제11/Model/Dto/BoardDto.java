@@ -22,6 +22,14 @@ public class BoardDto {
 		this.mno = mno;
 		this.mid = mid;
 	}
+	
+	public BoardDto(int bno, String btitle, String bcontent) {
+		super();
+		this.bno = bno;
+		this.btitle = btitle;
+		this.bcontent = bcontent;
+	}
+
 	// + 글등록시 사용되는 생성자
 	public BoardDto(String btitle, String bcontent, int mno) {
 		super();
