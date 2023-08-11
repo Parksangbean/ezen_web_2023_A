@@ -44,11 +44,12 @@ public class LoginPage {
 		System.out.println(" name : "+result.getMname());
 		System.out.println(" number : "+result.getMnumber());
 		
-		System.out.println("1.비밀번호수정 2. 회원탈퇴 3. 뒤로가기 선택>>");
+		System.out.println("1.비밀번호수정 2. 회원탈퇴 3. 뒤로가기 선택 4. 쪽지 확인>>");
 		int ch = sc.nextInt();
 		if(ch==1) {infoUpdate();}
 		if(ch==2) {infoDelete();}
 		if(ch==3) {return;}
+		if(ch==4) {letterCheck();}
 		
 		
 	}
@@ -124,10 +125,11 @@ public class LoginPage {
 		System.out.printf("content : %s \n ",result.getBcontent());
 		
 		// 4. 추가메뉴
-		System.out.println("1.뒤로가기 2. 수정 3. 삭제 4.선택>"); int ch = sc.nextInt();
+		System.out.println("1.뒤로가기 2. 수정 3. 삭제 4.쪽지 보내기 선택>"); int ch = sc.nextInt();
 		if(ch==1) {}
 		if(ch==2) {boardUpdate(bno,result.getMno());}	// 보고있는 게시물 번호와 작성자 회원번호
 		if(ch==3) {boardDelete(bno, result.getMno());}	// 보고있는 게시물 번호와 작성자 회원번호
+		if(ch==4) { lettersend	() ; }
 	}
 	// 12. boardUpdate: 게시물 수정
 	public void boardUpdate(int bno , int mno ) {
@@ -151,4 +153,18 @@ public class LoginPage {
 		else if(result==2) {System.out.println("경고] 글 삭제 실패 : 관리자 오류");}
 		else if(result==3) {System.out.println("경고] 본인 글만 삭제 가능합니다.");}
 	}
+	public void lettersend() {
+		System.out.println("--------- Letter Send ----------");
+		System.out.println("쪽지보낼내용:  >"); String content =sc.next();
+		boolean result =
+		BoardController.getInstance().lettersend(content);
+		if(result) {System.out.println("안내] 글쓰기 등록");}
+		else {System.out.println("안내] 글쓰기 실패 : 관리자에게 문의 하세요.!!");}
+		
+	}
+	public void letterCheck() {
+		System.out.println("----- Letter Check -------");
+		
+	}
+
 }

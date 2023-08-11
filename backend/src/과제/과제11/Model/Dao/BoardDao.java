@@ -94,5 +94,10 @@ public class BoardDao extends Dao {
 			}catch (Exception e) {System.out.println(e);}
 			return false;
 		}
-		
+		public void letteerCheck(int bno , int mno) {
+			
+		}
+		public void lettersend(String content) {
+			
+		}
 }

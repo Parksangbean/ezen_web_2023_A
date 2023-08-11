@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import 과제.과제11.Model.Dao.BoardDao;
 import 과제.과제11.Model.Dto.BoardDto;
+import 과제.과제11.Model.Dto.LetterDto;
 import 과제.과제11.View.LoginPage;
 
 public class BoardController {
@@ -52,6 +53,14 @@ public class BoardController {
 			boolean result = BoardDao.getInstance().boardDelete(bno);
 			if(result) return 1;
 			else return 2;
-			
 		}	
+		public boolean lettersend(String content) {
+			
+			LetterDto letterDto = new LetterDto(content ,MemberController.getInstance().getLoginSession());
+			return false;
+		}
+		public BoardDto letteerCheck(int bno ,int mno) {
+			
+			return null;
+		}
 }
