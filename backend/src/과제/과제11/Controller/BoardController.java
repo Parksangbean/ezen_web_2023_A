@@ -54,11 +54,7 @@ public class BoardController {
 			if(result) return 1;
 			else return 2;
 		}	
-		public boolean lettersend(String content) {
-			
-			LetterDto letterDto = new LetterDto(content ,MemberController.getInstance().getLoginSession());
-			return false;
-		}
+		
 		public BoardDto letteerCheck(int bno ,int mno) {
 			
 			return null;
