@@ -29,7 +29,7 @@ public class BoardController {
 			return BoardDao.getInstance().boardPrint();
 		}
 		// 11. boardView	: 개별 게시물 출력
-		public BoardDto boardView(int bno) {
+		public BoardDto boardView(int bno ) {
 			
 			return BoardDao.getInstance().boardView(bno);
 		}

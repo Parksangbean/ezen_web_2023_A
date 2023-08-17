@@ -127,7 +127,7 @@ public class LoginPage {
 		// 4. 추가메뉴
 		System.out.println("1.뒤로가기 2. 수정 3. 삭제 4.쪽지 보내기 선택>"); int ch = sc.nextInt();
 		if(ch==1) {}
-		if(ch==2) {boardUpdate(bno,result.getMno());}	// 보고있는 게시물 번호와 작성자 회원번호
+		if(ch==2) {boardUpdate(bno, result.getMno());}	// 보고있는 게시물 번호와 작성자 회원번호
 		if(ch==3) {boardDelete(bno, result.getMno());}	// 보고있는 게시물 번호와 작성자 회원번호
 		if(ch==4) {  }
 	}
