@@ -9,6 +9,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+			<%@include file = "../header.jsp" %>
+			
 			<!-- CRUD(Restful Api) 기반의 게시판 구현 -->
 			<div class ="visitwrap"> <!-- 전체구역 -->
 			
