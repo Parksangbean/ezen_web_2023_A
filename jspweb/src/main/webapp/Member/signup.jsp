@@ -25,6 +25,7 @@
 		<button onclick="signup()" type="button">회원가입</button>
 	</div>
 	
+	<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="../js/singup.js" type="text/javascript"> </script>
 	
 

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>가계부</title>
 		<link href="accountbook.css" rel = "stylesheet"/>
 </head>
 <body>
