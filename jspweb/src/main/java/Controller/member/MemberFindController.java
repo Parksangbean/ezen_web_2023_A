@@ -25,13 +25,15 @@ public class MemberFindController extends HttpServlet {
 		
 	}
 	
+	// 하나의 메소드의 여러 AJAX 통신할때. type(숫자 1: 아이디중복검사 2. 이메일중복검사 vs 필드명 : mid : 아이디중복검사 memail :이메일중복검사)
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 1. 요청한다
+		String type = request.getParameter("type");
 		String mid = request.getParameter("mid");
 		// 2. 객채화/유효성검사
 		
 		// 3. DAO 요청 결과
-		boolean result = MemberDao.getInstance().findId(mid);
+		boolean result = MemberDao.getInstance().findIdorEmail(type,mid);
 		// 4. 결과 응답한다.
 		response.setContentType("application/json;charset=UTF-8");
 		response.getWriter().print(result);

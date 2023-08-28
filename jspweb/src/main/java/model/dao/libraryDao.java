@@ -16,10 +16,10 @@ public class libraryDao extends Dao{
 		   try {
 			   
 			   String sql="insert into library(lno,lname,lphone) values(?,?,?)";
-			   ps=conn.prepareStatement(sql);
+			   ps = conn.prepareStatement(sql);
 			   ps.setInt(1, dto.getLno());
 			   ps.setString(2, dto.getLname());
-			   ps.setString(2, dto.getLphone());
+			   ps.setString(3, dto.getLphone());
 			   int rs = ps.executeUpdate();
 			   if(rs==1) {return true;}
 			   return false;

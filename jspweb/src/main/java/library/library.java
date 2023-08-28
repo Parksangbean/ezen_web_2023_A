@@ -32,9 +32,9 @@ public class library extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int lno = Integer.parseInt(request.getParameter("Lno"));
-		String name = request.getParameter("name");
-		String phone = request.getParameter("phone");
+		int lno = Integer.parseInt(request.getParameter("lno")); System.out.println(lno);
+		String name = request.getParameter("name"); System.out.println(name);
+		String phone = request.getParameter("phone"); System.out.println(phone);
 		
 		
 		libraryDto dto = new libraryDto(lno,name,phone);

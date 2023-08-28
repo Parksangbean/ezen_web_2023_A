@@ -17,9 +17,15 @@
 		아이디 : <input onkeyup="idcheck()" class="mid" type="text" /> 
 		<span class="idchackbox"></span>
 		<br/>
-		비밀번호 : <input class="mpwd" type="password" /> <br/>
-		비밀번호 확인 : <input class="mpwdconfirm" type="password" /> <br/>
-		이메일 : <input class="memail" type="text" /> <br/>
+		비밀번호 : <input onkeyup="pwcheck()" class="mpwd" type="password" /> <br/>
+		
+		<span class="pwcheckbox"></span>
+		<br/>
+		비밀번호 확인 : <input onkeyup="pwcheck()" class="mpwdconfirm" type="password" /> <br/>
+		이메일 : <input onkeyup="emailcheck()" class="memail" type="text" /> <button type="button">인증요청</button><br/>
+		인증코드 : <input class="ecode" type="text"/> <button type="button">인증</button>
+		<span class="emailcheckbox"></span>
+		<br/>
 		이메일 인증코드 : <input class="ecode" type="text" /> <br/>
 		프로필 : 	<input class="mimg" type="file" /> <br/>
 		<button onclick="signup()" type="button">회원가입</button>
