@@ -8,6 +8,8 @@
 		<link href="accountbook.css" rel = "stylesheet"/>
 </head>
 <body>
+
+		<%@include file = "../header.jsp" %>
 		<div class="awrap">
 			<div class = "aname">가계부</div>
 				<div class = "aTop">
@@ -34,7 +36,7 @@
 		<!-- AJAX 연결  -->
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 		
-		<script src="accountbook.js"   type="text/javascript"></script>
+		<script src="../js/accountbook.js" type="text/javascript"> </script>
 	
 	<div>	<!-- 출력할 구역  -->
 	
