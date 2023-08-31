@@ -24,13 +24,8 @@
 					<li><a href="/jspweb/library/library.jsp">과제2. 열람실</a></li>
 					<li><a href="/jspweb/hrm/hrm.jsp">과제3.직원관리</a></li>	
 				</ul>
-				<ul class="submenu">	<!-- 서브메뉴 -->
-						<li><a href="/jspweb/Member/signup.jsp">회원가입</a></li>
-						<li><a href="/jspweb/Member/login.jsp">로그인</a></li>
-						<li><a href="#">로그아웃</a></li>
-						<li><a href="#">마이페이지</a></li>
-						<li><img class="hmimg" src="/jspweb/Member/img/defult.webp"/> </li>
-				</ul>
+				<!-- 서브메뉴 -->	
+				<ul class="submenu"></ul>
 				
 			</div>
 			
@@ -38,6 +33,7 @@
 			
 			<!-- 최신 JQERY  연결  -->
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src ="/jspweb/js/header.js"></script>
 		
 </body>
 </html>

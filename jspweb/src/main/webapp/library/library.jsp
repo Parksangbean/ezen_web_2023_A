@@ -11,6 +11,7 @@
       
 </head>
 <body>
+		<%@include file = "../header.jsp" %>
       <h1 class="title">도서관</h1>
    <div class="librarywrap"> <!-- 전체구역 -->
       <div class="button_wrap"> <!--  버튼 구역  -->

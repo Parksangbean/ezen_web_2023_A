@@ -1,5 +1,7 @@
 package model.dao;
 
+import java.util.ArrayList;
+
 import model.dto.HrmDto;
 
 public class HrmDao extends Dao{
@@ -22,4 +24,25 @@ public class HrmDao extends Dao{
 		
 		return false;
 	}
+
+public ArrayList<HrmDto>hread(){
+		ArrayList<HrmDto> list = new ArrayList<HrmDto>();
+		try {
+			String sql ="select * from hrm order by hrmday desc";
+			ps=conn.prepareStatement(sql);
+			rs=ps.executeQuery();
+			while(rs.next()) {
+				int hrmno = rs.getInt("hrmno");
+				String hrmimg = rs.getString("hrmimg");
+				String hrmname = rs.getString("hrmname");
+				String hrmphone = rs.getString("hrmphone");
+				String hrmposition = rs.getString("hrmposition");
+				HrmDto hrmDto = new HrmDto(hrmno,hrmimg,hrmname,hrmphone,hrmposition);
+				list.add(hrmDto);
+				
+			}
+		}catch (Exception e) {System.out.println(e);}
+		return list;
+	}
 }
+

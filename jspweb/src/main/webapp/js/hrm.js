@@ -37,6 +37,37 @@ function save(){
 				})
 }
 
+function aview() {
+	$.ajax({
+		url : "/jspweb/HrmController",
+		method: "get",
+		data: "",
+		success: function f(r) {
+		
+
+			let output = document.querySelector(".hrm_Bottom")
+			let html = ``;
+			for (let i = 0; i < r.length; i++) {
+				html += `<div class = "hrm_Bottom"><!--아래 출력구역  -->
+		<div class="abox">
+			<div class="hrm_position">${r[i].position}</div>
+			<div class="hrm_name">${r[i].name}</div>
+			<div class="hrm_phone">${r[i].phone}</div>
+			<div class="hrm_himg">${r[i].himg}</div>
+			
+		</div>
+	</div>`
+			}
+			output.innerHTML=html;
+		},
+		error: function f(r) { }
+	})
+}
+
+
+
+
+
 function preimg( o ){ console.log('사진 선택 변경');
 	console.log( o ); // 이벤트 발생시킨 태그의 DOM객체를 인수로 받음
 	// 1. input태그의 속성 [ type,class,onchange,name,value 등등 ] type="file" 이면 추가적인 속성 
