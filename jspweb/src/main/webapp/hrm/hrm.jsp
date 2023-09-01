@@ -20,17 +20,17 @@
 			<option value="주임">주임</option>
 			<option value="사원">사원</option>
 		</select> <br>
+		<div class = "intitle">프로필</div>
+			<input onchange = "preimg(this)"class = "hfile" name = "himg" type = "file"/>
+			<img class = "preimg" alt = "" src = "img/defult.webp">
 		<div class="intitle">직원명:</div>
 		<input type="text" id="name" name="name"><br>
 		<div class="intitle">전화번호:</div>
 
 		<input type="tel" id="phone" name="phone"><br>
 
-		<div class="intitle">직원 프로필</div>
-		<input name="himg" class="himg" type="file" /> <br /> <img
-			class="preimg" onclick="preimg()" alt=""
-			src="../jspweb/img/defult.webp">
-		<!-- 등록 사진을 미리보기 할 사진 태그  -->
+		
+		
 
 		<button type="button" onclick="save()">저장</button>
 	</form>

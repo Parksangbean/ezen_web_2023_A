@@ -48,7 +48,7 @@
 	</div>
 	
 	<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="../js/singup.js" type="text/javascript"> </script>
+	<script src="../js/signup.js" type="text/javascript"> </script>
 	
 
 </body>
