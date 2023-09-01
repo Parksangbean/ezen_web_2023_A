@@ -22,12 +22,12 @@
 			내용 : <textarea name="bcontent" class="bcontent"></textarea> <br/>
 			첨부파일 : <input type="file" name="bfile" class="bfile"> <br/>
 			<button onclick="bwrite()"type="button">글등록</button> 
-			<a href="list.jsp"> 목록보기 </a>
+			<a class="list" href="list.jsp"> 목록보기 </a>
 			<button type="reset" >다시쓰기</button>
 		</form>
 	</div>
 		
     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="../js/board/write.js" type="text/javascript"></script>
-</body>
+</body> 
 </html>

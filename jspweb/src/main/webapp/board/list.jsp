@@ -4,12 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link href="../css/board/list.css" rel="stylesheet">
 <title>Insert title here</title>
 </head>
 <body>
 		<%@include file="../header.jsp" %>
 		<div class="webcontainer">
 			<h3>글 목록 페이지</h3>
+			<table class="boardTable"> </table>
 			<button onclick="onWrite()" type="button">글쓰기</button>
 		</div>
 		
