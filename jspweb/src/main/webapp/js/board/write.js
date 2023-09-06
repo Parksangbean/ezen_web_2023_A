@@ -1,3 +1,15 @@
+
+/*썸머노트 실행*/
+$(document).ready(function() {
+	
+	let option = {
+		lang : 'ko-KR' ,
+		height : 500,
+		placeholder : '여기에 내용작성'
+	}
+  $('#summernote').summernote(option);
+});
+
 function bwrite(){
 	console.log('실행');
 	// 1. form  가져오기
@@ -27,7 +39,6 @@ function bwrite(){
 			 }
           } ,       
             error : e=>{} ,         
-   });
-	 
+   }); 
 }
 
