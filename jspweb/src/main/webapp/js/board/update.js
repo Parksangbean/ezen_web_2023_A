@@ -17,7 +17,7 @@ function getBoard(){
             data : {type : 2, bno : bno},      
            success : r =>{
 			   // 응답 결과  html 대입
-             document.querySelector('.bcno').value=`${r.bcno}`;
+             document.querySelector('.bcno').v.alue=`${r.bcno}`;
              document.querySelector('.btitle').value=`${r.btitle}`;
              document.querySelector('.bcontent').innerHTML=`${r.bcontent}`;
              document.querySelector('.oldfile').value=`${r.bfile}`;
