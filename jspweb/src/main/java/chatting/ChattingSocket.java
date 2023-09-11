@@ -1,4 +1,4 @@
-package Controller.chatting;
+package chatting;
 
 import java.io.IOException;
 import java.util.ArrayList;
