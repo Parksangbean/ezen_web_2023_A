@@ -23,7 +23,7 @@ function getMemberInfo(){
 				html += ` <li> ${ r.mid } 님 </li>
 						<li> <img class="hmimg" src="/jspweb/Member/img/${ r.mimg }" /> </li>
 						<li> <a href="/jspweb/Member/info.jsp">마이페이지</a> </li>
-						<li> <a onclick="logout()" href="#">로그아웃</a> </li> `
+						<li> <a onclick="logout()" href="#">로그아웃</a> </li>`
 				if( r.mid == "admin"){ } // 로그인 했는데 관리자메뉴
 			}
 			// - 구성된 html 대입
