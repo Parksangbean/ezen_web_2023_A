@@ -91,7 +91,7 @@ function onRegister(){
 		}
 	
 	// 3.
-	$.ajax({
+	$.a-  jax({
 		
             url : "/jspweb/ProductinfoController",   
             method : "post",   
@@ -209,3 +209,51 @@ function fileDelete( i ){  fileList.splice( i , 1 ); fileListPrint(); }
 		4. drop			:
 	
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
