@@ -20,7 +20,7 @@ function getBoard(){
              document.querySelector('.bcno').v.alue=`${r.bcno}`;
              document.querySelector('.btitle').value=`${r.btitle}`;
              document.querySelector('.bcontent').innerHTML=`${r.bcontent}`;
-             document.querySelector('.oldfile').value=`${r.bfile}`;
+             document.querySelector('.oldfile').value=`${r.oldfile}`;
              
              /* 썸머노트 실행 */
 			$(document).ready(function() {

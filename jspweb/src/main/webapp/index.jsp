@@ -40,54 +40,15 @@
 		
 		<!-- 카드(bs) : 다양한 컨텐츠를 표시하는 컨테이너[구역]  -->
 		<div class="container"> <!-- container(bs) : 컨테이너 구역  -->
-		
-			<div class="row row-cols-1 row-cols-md-4 g-4">
-			
-			  <div class="col">
-			    <div class="card">
-			      <img src="..." class="card-img-top" alt="...">
-			      <div class="card-body">
-			        <h5 class="card-title">Card title</h5>
-			        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-			      </div>
-			    </div>
-			  </div>
-			  
-			  <div class="col">
-			    <div class="card">
-			      <img src="..." class="card-img-top" alt="...">
-			      <div class="card-body">
-			        <h5 class="card-title">Card title</h5>
-			        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-			      </div>
-			    </div>
-			  </div>
-			  
-			  <div class="col">
-			    <div class="card">
-			      <img src="..." class="card-img-top" alt="...">
-			      <div class="card-body">
-			        <h5 class="card-title">Card title</h5>
-			        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-			      </div>
-			    </div>
-			  </div>
-			  
-			  <div class="col">
-			    <div class="card">
-			      <img src="..." class="card-img-top" alt="...">
-			      <div class="card-body">
-			        <h5 class="card-title">Card title</h5>
-			        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-			      </div>
-			    </div>
-			  </div>
-			  
+			<div class="productBox row row-cols-1 row-cols-md-4 g-4">
+				<!-- JS가 HTML 넣어주는 위치 -->
 			</div>
-			
 		</div>
+			  
+			  
+			  
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-	
+	<script src="/jspweb/js/index.js" type="text/javascript"></script>
 	
 	
 	<!-- JSP파일안에 다른 JSP 파일 import 하기 -->

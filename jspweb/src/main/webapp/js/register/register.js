@@ -91,7 +91,7 @@ function onRegister(){
 		}
 	
 	// 3.
-	$.a-  jax({
+	$.ajax({
 		
             url : "/jspweb/ProductinfoController",   
             method : "post",   
