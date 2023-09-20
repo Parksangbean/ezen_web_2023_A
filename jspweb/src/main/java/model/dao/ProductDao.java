@@ -64,7 +64,7 @@ public class ProductDao extends Dao{
 	public Map<Integer, String> getProductImg(int pno){
 		try {
 			Map<Integer, String > imglist = new HashMap<>();
-			String sql ="select * from productimg where pno="+rs.getInt("pno");
+			String sql ="select * from productimg where pno="+pno;
 			
 			PreparedStatement ps2 = conn.prepareStatement(sql);
 			

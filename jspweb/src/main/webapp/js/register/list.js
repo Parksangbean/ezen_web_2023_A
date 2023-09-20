@@ -60,27 +60,52 @@ function getInfo() {
 
 
 // 2. 해당하는 동서남북 좌표에 범위내 제품만 출력하기
-function findByLatLng(east , west , south , north){
+// 2. 현재카카오지도내 보고있는 동서남북 기준내 제품들을 출력 함수 
+function findByLatLng( east , west  ,  south  , north  ) {
+	clusterer.clear(); // * 클러스터내 모든 마커를 초기화
 	$.ajax({
-      
-            url : "/jspweb/ProductinfoController",   
-            method : "get",
-            async : false , /* ajax통신은 기본적으로 [비동기통신 = async : true / [동기통신 async : false]]*/   
-            data : {type : "findByLatLng",east : east , west : west , south: south, north:north},      
-           success : jsonArray=>{console.log(jsonArray)
-           			     var markers = jsonArray.map((p) => {
-					   
-		            return new kakao.maps.Marker({
-		                position : new kakao.maps.LatLng(p.plat, p.plng)
-		            });
+		url : "/jspweb/ProductinfoController" , method : "get" ,
+		async : false , /* ajax 동기화설정 [비동기통신 async : true] / [동기통신 async : false] */
+		data : { type : "findByLatLng"  , east : east , west : west , south : south , north : north },
+		success : jsonArray => { console.log( jsonArray ); 
+		
+		
+			// ------------------ 1. 마커를 생성해서 클러스터에 저장 ------------------------------- //
+			var markers = jsonArray.map( (p) => {
+		        return new kakao.maps.Marker({
+		            position : new kakao.maps.LatLng( p.plat, p.plng )
 		        });
-		        clusterer.addMarkers(markers); 	
-           }     
-                  
-             
-   });
-}
-// 3. 카카오지도에서 드래그를 하고 끝났을때. 1번함수 재실행
-kakao.maps.event.addListener(map, 'dragend', function() {
-    getInfo();
-});
+		    });
+			clusterer.addMarkers(markers); // 마커들을 클러스터 저장..
+			
+			
+			// ------------------ 2. 사이드바에 제품 출력 ------------------------------------------ //
+			let sidebar = document.querySelector('.sidebar');
+			let html = ``;
+				// 
+				jsonArray.forEach( (p)=>{
+					html += `<div class="card mb-3" style="max-width: 540px;">	
+							  <div class="row g-0">	
+							    <div class="col-md-5">
+							    	<a href="/jspweb/Product/view.jsp?pno=${ p.pno }" >
+							      		<img src="/jspweb/Product/img/${ Object.values(p.imgList)[0] }" class="img-fluid rounded-start" alt="...">
+							    	</a>
+							    </div>
+							    <div class="col-md-7">
+							      <div class="card-body">
+							        <h5 class="card-title">${ p.pname }</h5>
+							        <p class="card-text">
+							        	<div> ${ p.pcontent } </div>
+							        	<div> ${ p.pprice.toLocaleString() } 원 </div>
+							        </p>
+							      </div>
+							    </div>
+							  </div>
+							</div>`
+				});
+			sidebar.innerHTML = html; 
+		}
+	})
+} // f end 
+// 3. 카카오지도에서 드래그를 하고 끝났을때. 1번함수 재실행 
+kakao.maps.event.addListener(map, 'dragend', function() {  getInfo(); });
