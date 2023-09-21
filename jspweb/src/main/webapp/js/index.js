@@ -15,7 +15,8 @@ function findByTop (count ) {
 						
 						let firstImg = Object.values(p.imgList)[0];
 						html +=`  <div class="col">
-						    				<div class="card">
+						    				 <div class="card" style = "height : 450px; border : none;">
+						    					<a href="/jspweb/Product/view.jsp?pno=${p.pno}">
 						      					<img src="/jspweb/Product/img/${firstImg}" class="card-img-top" alt="...">
 						      					<div class="card-body">
 						        					<h5 class="card-title">${p.pname}</h5>
